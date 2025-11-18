@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "IMU")(type "KiCad")(uri "C:/Users/adelc/Documents/fall-detection-capstone/electrical/symbols/ul_LSM6DSO32TR/KiCADv6/2025-11-18_22-14-21.kicad_sym")(options "")(descr ""))
+)
