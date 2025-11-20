@@ -611,6 +611,18 @@
     [
       "2a7dd2e8-59c9-4d04-9427-958ca4ea7daa",
       "Root"
+    ],
+    [
+      "7383ec9e-616f-491e-b9b4-a2281ee869cd",
+      "Power_Management"
+    ],
+    [
+      "ad786af7-ff00-44f4-8204-9aee6ad471a6",
+      "nRF"
+    ],
+    [
+      "0a46bc71-1510-4d16-84f4-1ed47583280c",
+      "Peripherals"
     ]
   ],
   "text_variables": {}
