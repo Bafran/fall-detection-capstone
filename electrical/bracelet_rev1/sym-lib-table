@@ -3,4 +3,5 @@
   (lib (name "IMU")(type "KiCad")(uri "C:/Users/adelc/Documents/fall-detection-capstone/electrical/symbols/ul_LSM6DSO32TR/KiCADv6/2025-11-18_22-14-21.kicad_sym")(options "")(descr ""))
   (lib (name "Battery Manager")(type "KiCad")(uri "C:/Users/adelc/Documents/fall-detection-capstone/electrical/symbols/MCP73831T-2ACI-OT/KiCADv6/2025-11-19_05-00-21.kicad_sym")(options "")(descr ""))
   (lib (name "LDO")(type "KiCad")(uri "C:/Users/adelc/Documents/fall-detection-capstone/electrical/symbols/XC6222B331MR-G/KiCADv6/2025-11-19_05-26-14.kicad_sym")(options "")(descr ""))
+  (lib (name "Heart Rate")(type "KiCad")(uri "C:/Users/adelc/Documents/fall-detection-capstone/electrical/symbols/MAX30102EFD-T/KiCADv6/2025-11-22_04-38-12.kicad_sym")(options "")(descr ""))
 )
