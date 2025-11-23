@@ -2859,26 +2859,6 @@
 		)
 		(uuid "fedd78db-66fb-46df-a991-0f2b942f80ff")
 	)
-	(label "IMU_INT2"
-		(at 90.17 81.28 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "b1332c78-8930-4095-93f1-9a43030d90bc")
-	)
-	(label "IMU_INT1"
-		(at 90.17 78.74 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "f988bea9-5d1d-4e4a-9ca0-e940c8ef6424")
-	)
 	(global_label "3V3"
 		(shape input)
 		(at 25.4 25.4 180)
@@ -3077,6 +3057,28 @@
 			)
 		)
 	)
+	(global_label "IMU_INT2"
+		(shape output)
+		(at 99.06 81.28 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c9862bc3-a103-45ee-969e-0655b2225b28")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 110.5119 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "BUZZER"
 		(shape input)
 		(at 185.42 135.89 180)
@@ -3095,6 +3097,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "IMU_INT1"
+		(shape output)
+		(at 99.06 78.74 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f24d51f3-4ffd-436c-8055-a25ec6724cee")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 110.5119 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
