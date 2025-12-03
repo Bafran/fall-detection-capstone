@@ -326,13 +326,14 @@
 		)
 		(uuid "920ae62a-c541-4979-86f2-dd49b18b9153")
 	)
-	(text "Block Diagram"
+	(text "Block Diagram (Rev 1.0)"
 		(exclude_from_sim no)
-		(at 122.682 21.59 0)
+		(at 109.22 22.86 0)
 		(effects
 			(font
 				(size 2.54 2.54)
 			)
+			(justify left bottom)
 		)
 		(uuid "9835534f-1865-4c13-81f5-592ff30b2ac3")
 	)
@@ -1084,6 +1085,48 @@
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa"
 					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 19.05 173.482)
+		(size 23.368 14.478)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "3d584547-2e56-41a9-bdec-87f8247f577d")
+		(property "Sheetname" "Wi-Fi"
+			(at 19.05 172.7704 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "untitled.kicad_sch"
+			(at 19.05 188.5446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "bracelet_rev1"
+				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa"
+					(page "5")
 				)
 			)
 		)

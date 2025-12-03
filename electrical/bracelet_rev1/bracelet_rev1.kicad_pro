@@ -623,6 +623,10 @@
     [
       "0a46bc71-1510-4d16-84f4-1ed47583280c",
       "Peripherals"
+    ],
+    [
+      "3d584547-2e56-41a9-bdec-87f8247f577d",
+      "Wi-Fi"
     ]
   ],
   "text_variables": {}
