@@ -1541,7 +1541,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1aafc2b3-f4cc-4ec3-b659-ae8d1f28f546")
-		(property "Reference" "#PWR043"
+		(property "Reference" "#PWR?"
 			(at 152.4 52.07 0)
 			(effects
 				(font
@@ -1592,7 +1592,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/3d584547-2e56-41a9-bdec-87f8247f577d"
-					(reference "#PWR043")
+					(reference "#PWR?")
 					(unit 1)
 				)
 			)
@@ -1607,7 +1607,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1c6d5867-8164-4a18-a52b-555f91a70930")
-		(property "Reference" "#PWR067"
+		(property "Reference" "#PWR?"
 			(at 34.29 26.67 0)
 			(effects
 				(font
@@ -1657,7 +1657,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/3d584547-2e56-41a9-bdec-87f8247f577d"
-					(reference "#PWR067")
+					(reference "#PWR?")
 					(unit 1)
 				)
 			)
@@ -1673,7 +1673,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "359efc4e-3a27-4679-a7fc-26a458d424f2")
-		(property "Reference" "#PWR069"
+		(property "Reference" "#PWR?"
 			(at 139.7 144.78 0)
 			(effects
 				(font
@@ -1724,7 +1724,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/3d584547-2e56-41a9-bdec-87f8247f577d"
-					(reference "#PWR069")
+					(reference "#PWR?")
 					(unit 1)
 				)
 			)
@@ -1740,7 +1740,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "66872137-99dc-4dcf-945b-798355b9a3a7")
-		(property "Reference" "C29"
+		(property "Reference" "C31"
 			(at 156.21 40.6399 0)
 			(effects
 				(font
@@ -1794,7 +1794,7 @@
 		(instances
 			(project ""
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/3d584547-2e56-41a9-bdec-87f8247f577d"
-					(reference "C29")
+					(reference "C31")
 					(unit 1)
 				)
 			)
@@ -1810,7 +1810,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "94cc7e70-358d-4550-9596-d35e430f3782")
-		(property "Reference" "U9"
+		(property "Reference" "U10"
 			(at 139.7 97.79 0)
 			(do_not_autoplace yes)
 			(effects
@@ -2005,7 +2005,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/3d584547-2e56-41a9-bdec-87f8247f577d"
-					(reference "U9")
+					(reference "U10")
 					(unit 1)
 				)
 			)
@@ -2020,7 +2020,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "cd108e67-1bd6-4b22-b54c-deafebb21c1f")
-		(property "Reference" "#PWR068"
+		(property "Reference" "#PWR?"
 			(at 127 35.56 0)
 			(effects
 				(font
@@ -2070,7 +2070,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/3d584547-2e56-41a9-bdec-87f8247f577d"
-					(reference "#PWR068")
+					(reference "#PWR?")
 					(unit 1)
 				)
 			)

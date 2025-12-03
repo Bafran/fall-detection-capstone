@@ -1168,7 +1168,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa"
-					(page "2")
+					(page "3")
 				)
 			)
 		)
@@ -1210,7 +1210,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa"
-					(page "3")
+					(page "2")
 				)
 			)
 		)
