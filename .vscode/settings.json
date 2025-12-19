@@ -1,0 +1,6 @@
+{
+  "nrf-connect.applications": [
+    "${workspaceFolder}\\software\\nrf54_firmware",
+    "${workspaceFolder}\\software\\blinky"
+  ]
+}

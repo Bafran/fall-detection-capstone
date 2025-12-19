@@ -2262,6 +2262,14 @@
 		(color 0 0 0 0)
 		(uuid "fd8c236c-bfb2-45d5-a96c-a5ea142143de")
 	)
+	(no_connect
+		(at 106.68 72.39)
+		(uuid "2cea8311-205f-413b-bc10-5d11c16a1e3e")
+	)
+	(no_connect
+		(at 109.22 72.39)
+		(uuid "a05e33ef-0de2-452c-97cc-7a8783e1bc97")
+	)
 	(wire
 		(pts
 			(xy 104.14 185.42) (xy 102.87 185.42)
@@ -3472,7 +3480,7 @@
 		)
 		(uuid "960f3a98-6b57-4695-ba00-b37b9ee7cce8")
 	)
-	(global_label "QSPI_DATA0"
+	(global_label "SPI_MOSI"
 		(shape bidirectional)
 		(at 114.3 72.39 90)
 		(fields_autoplaced yes)
@@ -3484,29 +3492,7 @@
 		)
 		(uuid "020ec5da-21b2-47dd-8c8b-b634df9388d5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 114.3 57.2868 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "QSPI_DATA3"
-		(shape bidirectional)
-		(at 106.68 72.39 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "12c37b4c-c2bf-4029-a52b-949fd7690793")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 106.68 57.2868 90)
+			(at 114.3 59.6454 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3604,29 +3590,7 @@
 			)
 		)
 	)
-	(global_label "QSPI_DATA2"
-		(shape bidirectional)
-		(at 109.22 72.39 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "90767645-b92c-473b-83ec-192c7e464b14")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 109.22 57.2868 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "QSPI_CLK"
+	(global_label "SPI_CLK"
 		(shape bidirectional)
 		(at 119.38 72.39 90)
 		(fields_autoplaced yes)
@@ -3638,7 +3602,7 @@
 		)
 		(uuid "92fe0ddc-2244-4b9a-9ad0-4ee6735464b9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 119.38 59.343 90)
+			(at 119.38 60.6735 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3692,7 +3656,7 @@
 			)
 		)
 	)
-	(global_label "QSPI_CS"
+	(global_label "SPI_CS"
 		(shape bidirectional)
 		(at 116.84 72.39 90)
 		(fields_autoplaced yes)
@@ -3704,7 +3668,7 @@
 		)
 		(uuid "e97468bf-1c30-4431-b590-33d83e7d00d8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 116.84 60.4316 90)
+			(at 116.84 61.7621 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3714,7 +3678,7 @@
 			)
 		)
 	)
-	(global_label "QSPI_DATA1"
+	(global_label "SPI_MISO"
 		(shape bidirectional)
 		(at 111.76 72.39 90)
 		(fields_autoplaced yes)
@@ -3726,7 +3690,7 @@
 		)
 		(uuid "f20cb857-dbd5-489e-8eaa-ff3950d3ca45")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 111.76 57.2868 90)
+			(at 111.76 59.6454 90)
 			(effects
 				(font
 					(size 1.27 1.27)
