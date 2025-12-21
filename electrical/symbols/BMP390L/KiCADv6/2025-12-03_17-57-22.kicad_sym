@@ -200,7 +200,27 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin output line
+				(at 19.05 17.78 180)
+				(length 7.62)
+				(name "SDO"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "BMP390L_1_1"
+			(pin power_in line
 				(at -21.59 -12.7 0)
 				(length 7.62)
 				(name "VSS"
@@ -218,7 +238,7 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin power_in line
 				(at -21.59 -15.24 0)
 				(length 7.62)
 				(name "VSS"
@@ -236,7 +256,7 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin power_in line
 				(at -21.59 -17.78 0)
 				(length 7.62)
 				(name "VSS"
@@ -247,24 +267,6 @@
 					)
 				)
 				(number "9"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin output line
-				(at 19.05 17.78 180)
-				(length 7.62)
-				(name "SDO"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "5"
 					(effects
 						(font
 							(size 1.27 1.27)

@@ -7,4 +7,5 @@
   (lib (name "Barometer")(type "KiCad")(uri "C:/Users/adelc/Documents/fall-detection-capstone/electrical/symbols/BMP390L/KiCADv6/2025-12-03_17-57-22.kicad_sym")(options "")(descr ""))
   (lib (name "TCK106AF")(type "KiCad")(uri "C:/Users/adelc/Documents/fall-detection-capstone/electrical/symbols/TCK106AF/KiCADv6/2025-12-19_01-47-33.kicad_sym")(options "")(descr ""))
   (lib (name "LSF0102V8")(type "KiCad")(uri "C:/Users/adelc/Documents/fall-detection-capstone/electrical/symbols/LSF0102V8-7/LSF0102V8.kicad_sym")(options "")(descr ""))
+  (lib (name "LFD182G45DCHD277")(type "KiCad")(uri "C:/Users/adelc/Documents/fall-detection-capstone/electrical/symbols/Diplexer/LFD182G45DCHD277.kicad_sym")(options "")(descr ""))
 )

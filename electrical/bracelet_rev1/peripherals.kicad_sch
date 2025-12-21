@@ -203,7 +203,27 @@
 						)
 					)
 				)
-				(pin power_out line
+				(pin output line
+					(at 19.05 17.78 180)
+					(length 7.62)
+					(name "SDO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "BMP390L_1_1"
+				(pin power_in line
 					(at -21.59 -12.7 0)
 					(length 7.62)
 					(name "VSS"
@@ -221,7 +241,7 @@
 						)
 					)
 				)
-				(pin power_out line
+				(pin power_in line
 					(at -21.59 -15.24 0)
 					(length 7.62)
 					(name "VSS"
@@ -239,7 +259,7 @@
 						)
 					)
 				)
-				(pin power_out line
+				(pin power_in line
 					(at -21.59 -17.78 0)
 					(length 7.62)
 					(name "VSS"
@@ -250,24 +270,6 @@
 						)
 					)
 					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 19.05 17.78 180)
-					(length 7.62)
-					(name "SDO"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1840,7 +1842,7 @@
 	)
 	(rectangle
 		(start 119.634 111.76)
-		(end 193.294 164.084)
+		(end 195.58 164.084)
 		(stroke
 			(width 0.254)
 			(type dash)
@@ -3158,7 +3160,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0a369893-c967-41ba-a118-b78428a709ad")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0162"
 			(at 29.21 26.67 0)
 			(effects
 				(font
@@ -3208,7 +3210,7 @@
 		(instances
 			(project ""
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/0a46bc71-1510-4d16-84f4-1ed47583280c"
-					(reference "#PWR?")
+					(reference "#PWR0162")
 					(unit 1)
 				)
 			)
@@ -3294,7 +3296,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "225e314a-211b-4421-8076-91d92455cb8a")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0149"
 			(at 57.15 161.29 0)
 			(effects
 				(font
@@ -3345,7 +3347,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/0a46bc71-1510-4d16-84f4-1ed47583280c"
-					(reference "#PWR?")
+					(reference "#PWR0149")
 					(unit 1)
 				)
 			)
@@ -3379,7 +3381,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 124.1552 153.67 0)
 			(effects
 				(font
@@ -3449,7 +3451,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 50.4952 66.04 0)
 			(effects
 				(font
@@ -3501,7 +3503,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "35191ee1-5ec3-428c-beda-bb0c2327a2cd")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0150"
 			(at 57.15 129.54 0)
 			(effects
 				(font
@@ -3551,7 +3553,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/0a46bc71-1510-4d16-84f4-1ed47583280c"
-					(reference "#PWR?")
+					(reference "#PWR0150")
 					(unit 1)
 				)
 			)
@@ -3567,7 +3569,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "37bb55ef-815b-42f0-bdd9-59bf2fc0e6cf")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0160"
 			(at 50.8 26.67 0)
 			(effects
 				(font
@@ -3617,7 +3619,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/0a46bc71-1510-4d16-84f4-1ed47583280c"
-					(reference "#PWR?")
+					(reference "#PWR0160")
 					(unit 1)
 				)
 			)
@@ -3633,7 +3635,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4356f2b9-13ea-4ba7-bded-01f2f3e25ae2")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0153"
 			(at 55.88 85.09 0)
 			(effects
 				(font
@@ -3684,7 +3686,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/0a46bc71-1510-4d16-84f4-1ed47583280c"
-					(reference "#PWR?")
+					(reference "#PWR0153")
 					(unit 1)
 				)
 			)
@@ -3718,7 +3720,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 136.8552 68.58 0)
 			(effects
 				(font
@@ -3770,7 +3772,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "45888c73-e08f-4020-887d-a092ac4afe18")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0165"
 			(at 173.99 76.2 0)
 			(effects
 				(font
@@ -3821,7 +3823,74 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/0a46bc71-1510-4d16-84f4-1ed47583280c"
-					(reference "#PWR?")
+					(reference "#PWR0165")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 189.23 128.27 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "471cfdab-d1ef-4a5e-ae5f-24b73f1a2204")
+		(property "Reference" "R24"
+			(at 192.532 130.048 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0"
+			(at 192.278 126.746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric_Pad0.64x0.40mm_HandSolder"
+			(at 187.452 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 189.23 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 189.23 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c0efbb03-ed8f-4fde-b505-21f9ae0aa610")
+		)
+		(pin "2"
+			(uuid "4fe53bae-c8b3-4c67-a5c5-99b90d3a62ca")
+		)
+		(instances
+			(project "bracelet_rev1"
+				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/0a46bc71-1510-4d16-84f4-1ed47583280c"
+					(reference "R24")
 					(unit 1)
 				)
 			)
@@ -3837,7 +3906,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "51981b65-02d2-4056-9842-0e0e81a5b3a6")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0163"
 			(at 153.67 102.87 0)
 			(effects
 				(font
@@ -3888,7 +3957,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/0a46bc71-1510-4d16-84f4-1ed47583280c"
-					(reference "#PWR?")
+					(reference "#PWR0163")
 					(unit 1)
 				)
 			)
@@ -3919,7 +3988,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 55.372 130.81 90)
 			(effects
 				(font
@@ -3971,7 +4040,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "75747ded-11f1-411a-b7d5-647a17236c6e")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0148"
 			(at 97.79 151.13 0)
 			(effects
 				(font
@@ -4022,7 +4091,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/0a46bc71-1510-4d16-84f4-1ed47583280c"
-					(reference "#PWR?")
+					(reference "#PWR0148")
 					(unit 1)
 				)
 			)
@@ -4163,7 +4232,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 174.9552 68.58 0)
 			(effects
 				(font
@@ -4215,7 +4284,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7f4aaca8-ba5a-4045-a031-00792efba6a3")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0156"
 			(at 142.24 124.46 0)
 			(effects
 				(font
@@ -4265,7 +4334,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/0a46bc71-1510-4d16-84f4-1ed47583280c"
-					(reference "#PWR?")
+					(reference "#PWR0156")
 					(unit 1)
 				)
 			)
@@ -4281,7 +4350,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8659ab80-24e6-48b0-b9a4-21058e86525b")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0155"
 			(at 143.51 165.1 0)
 			(effects
 				(font
@@ -4332,7 +4401,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/0a46bc71-1510-4d16-84f4-1ed47583280c"
-					(reference "#PWR?")
+					(reference "#PWR0155")
 					(unit 1)
 				)
 			)
@@ -4348,7 +4417,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8fb69469-ffc6-4d37-a917-470423609e7e")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0151"
 			(at 38.1 149.86 0)
 			(effects
 				(font
@@ -4399,7 +4468,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/0a46bc71-1510-4d16-84f4-1ed47583280c"
-					(reference "#PWR?")
+					(reference "#PWR0151")
 					(unit 1)
 				)
 			)
@@ -4415,7 +4484,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "906d2072-3fb1-4f95-8ece-b0c8a2bf52af")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0159"
 			(at 49.53 57.15 0)
 			(effects
 				(font
@@ -4465,7 +4534,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/0a46bc71-1510-4d16-84f4-1ed47583280c"
-					(reference "#PWR?")
+					(reference "#PWR0159")
 					(unit 1)
 				)
 			)
@@ -4481,7 +4550,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9cf5f35a-c890-4cf8-8aeb-13b734e71bb2")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0147"
 			(at 153.67 63.5 0)
 			(effects
 				(font
@@ -4531,7 +4600,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/0a46bc71-1510-4d16-84f4-1ed47583280c"
-					(reference "#PWR?")
+					(reference "#PWR0147")
 					(unit 1)
 				)
 			)
@@ -4563,7 +4632,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Button_Switch_SMD:SW_MEC_5GSH9"
 			(at 46.99 134.62 0)
 			(effects
 				(font
@@ -4621,7 +4690,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a7251068-0a81-46d6-a8c6-ae2a56e458d2")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0161"
 			(at 49.53 72.39 0)
 			(effects
 				(font
@@ -4672,7 +4741,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/0a46bc71-1510-4d16-84f4-1ed47583280c"
-					(reference "#PWR?")
+					(reference "#PWR0161")
 					(unit 1)
 				)
 			)
@@ -4688,7 +4757,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "abf51a3a-67c9-44f5-adbb-19bb417c92ea")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0152"
 			(at 74.93 102.87 0)
 			(effects
 				(font
@@ -4739,7 +4808,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/0a46bc71-1510-4d16-84f4-1ed47583280c"
-					(reference "#PWR?")
+					(reference "#PWR0152")
 					(unit 1)
 				)
 			)
@@ -4770,7 +4839,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 38.862 83.82 90)
 			(effects
 				(font
@@ -4840,7 +4909,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 63.1952 66.04 0)
 			(effects
 				(font
@@ -4892,7 +4961,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ba49de7d-c347-495a-978c-81e972aead71")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0158"
 			(at 40.64 82.55 0)
 			(effects
 				(font
@@ -4942,7 +5011,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/0a46bc71-1510-4d16-84f4-1ed47583280c"
-					(reference "#PWR?")
+					(reference "#PWR0158")
 					(unit 1)
 				)
 			)
@@ -4976,7 +5045,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 138.1252 153.67 0)
 			(effects
 				(font
@@ -5028,7 +5097,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c37e0fe4-92cb-4d8b-bd32-86f0c69c2086")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0164"
 			(at 123.19 76.2 0)
 			(effects
 				(font
@@ -5079,7 +5148,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/0a46bc71-1510-4d16-84f4-1ed47583280c"
-					(reference "#PWR?")
+					(reference "#PWR0164")
 					(unit 1)
 				)
 			)
@@ -5095,7 +5164,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c7c6b28b-fba7-47d6-98a5-1c8d71181d05")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0146"
 			(at 148.59 63.5 0)
 			(effects
 				(font
@@ -5145,7 +5214,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/0a46bc71-1510-4d16-84f4-1ed47583280c"
-					(reference "#PWR?")
+					(reference "#PWR0146")
 					(unit 1)
 				)
 			)
@@ -5161,7 +5230,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d3dcfd44-ad7b-4948-ad77-399214ce742d")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0157"
 			(at 137.16 147.32 0)
 			(effects
 				(font
@@ -5211,7 +5280,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/0a46bc71-1510-4d16-84f4-1ed47583280c"
-					(reference "#PWR?")
+					(reference "#PWR0157")
 					(unit 1)
 				)
 			)
@@ -5349,7 +5418,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 124.1552 68.58 0)
 			(effects
 				(font
@@ -5419,7 +5488,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 58.1152 153.67 0)
 			(effects
 				(font
@@ -5489,7 +5558,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 162.2552 68.58 0)
 			(effects
 				(font
@@ -5556,7 +5625,7 @@
 				)
 			)
 		)
-		(property "Footprint" "10LGA_2X2X0p75_BOS"
+		(property "Footprint" ""
 			(at 167.64 140.97 0)
 			(effects
 				(font
@@ -5626,7 +5695,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 189.23 124.46 0)
+		(at 189.23 132.08 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5634,8 +5703,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f632ea20-b741-47b3-a2e9-17138e964dea")
-		(property "Reference" "#PWR?"
-			(at 189.23 130.81 0)
+		(property "Reference" "#PWR0154"
+			(at 189.23 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5644,7 +5713,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 189.23 129.54 0)
+			(at 189.23 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5653,7 +5722,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 189.23 124.46 0)
+			(at 189.23 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5662,7 +5731,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 189.23 124.46 0)
+			(at 189.23 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5671,7 +5740,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 189.23 124.46 0)
+			(at 189.23 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5685,7 +5754,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/0a46bc71-1510-4d16-84f4-1ed47583280c"
-					(reference "#PWR?")
+					(reference "#PWR0154")
 					(unit 1)
 				)
 			)

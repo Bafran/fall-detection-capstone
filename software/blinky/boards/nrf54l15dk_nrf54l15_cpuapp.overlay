@@ -99,6 +99,7 @@
 		n70_coex_req-gpios = <&gpio2 9 0>;
 		n70_coex_grant-gpios = <&gpio2 10 0>;
 		n70_sw_ctrl0-gpios = <&gpio2 3 0>;
+		bmp_irq-gpios = <&gpio0 2 0>;
 	};
 };
 

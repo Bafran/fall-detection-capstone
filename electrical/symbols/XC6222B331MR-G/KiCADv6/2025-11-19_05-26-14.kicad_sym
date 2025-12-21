@@ -146,24 +146,6 @@
 					)
 				)
 			)
-			(pin output line
-				(at 34.29 0 180)
-				(length 3.81)
-				(name "VOUT"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "5"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
 			(pin no_connect line
 				(at 34.29 -12.7 180)
 				(length 3.81)
@@ -175,6 +157,26 @@
 					)
 				)
 				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "XC6222B331MR-G_1_1"
+			(pin power_out line
+				(at 34.29 0 180)
+				(length 3.81)
+				(name "VOUT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
 					(effects
 						(font
 							(size 1.27 1.27)

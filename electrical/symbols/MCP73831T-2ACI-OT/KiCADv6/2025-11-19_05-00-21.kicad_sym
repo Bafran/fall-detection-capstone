@@ -147,24 +147,6 @@
 				)
 			)
 			(pin unspecified line
-				(at 30.48 0 180)
-				(length 3.81)
-				(name "VBAT"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "3"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin unspecified line
 				(at 30.48 -5.08 180)
 				(length 3.81)
 				(name "PROG"
@@ -175,6 +157,26 @@
 					)
 				)
 				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "MCP73831T-2ACI_OT_1_1"
+			(pin power_out line
+				(at 30.48 0 180)
+				(length 3.81)
+				(name "VBAT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
 					(effects
 						(font
 							(size 1.27 1.27)

@@ -3329,7 +3329,7 @@
 		(uuid "be3a7f8b-deed-472b-8191-f818ac858b21")
 	)
 	(junction
-		(at 259.08 87.63)
+		(at 248.92 87.63)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c3481c82-96ec-4aa6-9440-3894daecb68b")
@@ -3371,6 +3371,12 @@
 		(uuid "e8a3f43d-07e1-4bab-ac75-187a194e7de7")
 	)
 	(junction
+		(at 248.92 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "eba2ad67-6c07-4446-8118-13c7c4710381")
+	)
+	(junction
 		(at 195.58 63.5)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3381,6 +3387,34 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f9f53e08-bfd2-4713-9096-7cdc2058fda0")
+	)
+	(no_connect
+		(at 59.69 83.82)
+		(uuid "3287c1fc-f55e-4f66-8466-8f42f05907be")
+	)
+	(no_connect
+		(at 59.69 116.84)
+		(uuid "8af39e94-004f-474c-b6e1-3f21fd000814")
+	)
+	(no_connect
+		(at 59.69 86.36)
+		(uuid "a6d0d0ee-3bf4-4527-8326-2e26a38cd2fc")
+	)
+	(no_connect
+		(at 59.69 106.68)
+		(uuid "c2a2200d-4972-4eb1-bb78-0685d510aea9")
+	)
+	(no_connect
+		(at 59.69 96.52)
+		(uuid "d4c2100d-76d2-412e-ada4-ddeb9bf1ff03")
+	)
+	(no_connect
+		(at 59.69 111.76)
+		(uuid "db57b13c-9893-460d-aecb-b21d800dba87")
+	)
+	(no_connect
+		(at 59.69 127)
+		(uuid "f6dc9e21-7df2-4737-bf42-1c4a136e0374")
 	)
 	(wire
 		(pts
@@ -3524,16 +3558,6 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 21.59) (xy 228.6 24.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "269c577a-1d8b-42c4-b0c1-cadad9110e5a")
-	)
-	(wire
-		(pts
 			(xy 115.57 144.78) (xy 143.51 144.78)
 		)
 		(stroke
@@ -3564,7 +3588,17 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 106.68) (xy 218.44 106.68)
+			(xy 44.45 78.74) (xy 59.69 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28cec0cc-0330-4683-880f-3ac875c62b9b")
+	)
+	(wire
+		(pts
+			(xy 198.12 106.68) (xy 208.28 106.68)
 		)
 		(stroke
 			(width 0)
@@ -3574,7 +3608,7 @@
 	)
 	(wire
 		(pts
-			(xy 251.46 90.17) (xy 251.46 87.63)
+			(xy 241.3 90.17) (xy 241.3 87.63)
 		)
 		(stroke
 			(width 0)
@@ -3604,7 +3638,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 87.63) (xy 259.08 101.6)
+			(xy 248.92 87.63) (xy 248.92 101.6)
 		)
 		(stroke
 			(width 0)
@@ -3614,7 +3648,7 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 31.75) (xy 238.76 31.75)
+			(xy 248.92 109.22) (xy 259.08 109.22)
 		)
 		(stroke
 			(width 0)
@@ -3624,7 +3658,7 @@
 	)
 	(wire
 		(pts
-			(xy 248.92 106.68) (xy 259.08 106.68)
+			(xy 238.76 106.68) (xy 259.08 106.68)
 		)
 		(stroke
 			(width 0)
@@ -3644,7 +3678,7 @@
 	)
 	(wire
 		(pts
-			(xy 213.36 96.52) (xy 213.36 97.79)
+			(xy 203.2 96.52) (xy 203.2 97.79)
 		)
 		(stroke
 			(width 0)
@@ -3654,7 +3688,7 @@
 	)
 	(wire
 		(pts
-			(xy 218.44 101.6) (xy 208.28 101.6)
+			(xy 208.28 101.6) (xy 198.12 101.6)
 		)
 		(stroke
 			(width 0)
@@ -3694,7 +3728,7 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 93.98) (xy 208.28 101.6)
+			(xy 198.12 93.98) (xy 198.12 101.6)
 		)
 		(stroke
 			(width 0)
@@ -3704,7 +3738,7 @@
 	)
 	(wire
 		(pts
-			(xy 248.92 99.06) (xy 251.46 99.06)
+			(xy 238.76 99.06) (xy 241.3 99.06)
 		)
 		(stroke
 			(width 0)
@@ -3774,7 +3808,7 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 104.14) (xy 218.44 104.14)
+			(xy 198.12 104.14) (xy 208.28 104.14)
 		)
 		(stroke
 			(width 0)
@@ -3924,7 +3958,7 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 31.75) (xy 228.6 34.29)
+			(xy 248.92 109.22) (xy 248.92 111.76)
 		)
 		(stroke
 			(width 0)
@@ -3994,7 +4028,7 @@
 	)
 	(wire
 		(pts
-			(xy 218.44 99.06) (xy 218.44 96.52)
+			(xy 208.28 99.06) (xy 208.28 96.52)
 		)
 		(stroke
 			(width 0)
@@ -4011,16 +4045,6 @@
 			(type default)
 		)
 		(uuid "744dcd49-4467-427e-b690-0c7847c7713c")
-	)
-	(wire
-		(pts
-			(xy 228.6 29.21) (xy 238.76 29.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "75999f6b-4fdc-44ca-931d-dd745417a8c7")
 	)
 	(wire
 		(pts
@@ -4044,7 +4068,7 @@
 	)
 	(wire
 		(pts
-			(xy 218.44 96.52) (xy 213.36 96.52)
+			(xy 208.28 96.52) (xy 203.2 96.52)
 		)
 		(stroke
 			(width 0)
@@ -4074,7 +4098,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 24.13) (xy 55.88 24.13)
+			(xy 50.8 25.4) (xy 55.88 25.4)
 		)
 		(stroke
 			(width 0)
@@ -4124,7 +4148,7 @@
 	)
 	(wire
 		(pts
-			(xy 248.92 104.14) (xy 259.08 104.14)
+			(xy 238.76 104.14) (xy 259.08 104.14)
 		)
 		(stroke
 			(width 0)
@@ -4154,7 +4178,7 @@
 	)
 	(wire
 		(pts
-			(xy 251.46 87.63) (xy 259.08 87.63)
+			(xy 241.3 87.63) (xy 248.92 87.63)
 		)
 		(stroke
 			(width 0)
@@ -4164,7 +4188,7 @@
 	)
 	(wire
 		(pts
-			(xy 248.92 101.6) (xy 259.08 101.6)
+			(xy 238.76 101.6) (xy 248.92 101.6)
 		)
 		(stroke
 			(width 0)
@@ -4214,7 +4238,7 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 24.13) (xy 55.88 22.86)
+			(xy 55.88 22.86) (xy 55.88 25.4)
 		)
 		(stroke
 			(width 0)
@@ -4264,7 +4288,7 @@
 	)
 	(wire
 		(pts
-			(xy 251.46 99.06) (xy 251.46 97.79)
+			(xy 241.3 99.06) (xy 241.3 97.79)
 		)
 		(stroke
 			(width 0)
@@ -4454,13 +4478,23 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 24.13) (xy 238.76 24.13)
+			(xy 248.92 101.6) (xy 259.08 101.6)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "e00f0e23-f6aa-488c-890d-34fa0e01d7d5")
+	)
+	(wire
+		(pts
+			(xy 44.45 76.2) (xy 59.69 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e49ada6b-1762-4d67-98b1-cebee8263676")
 	)
 	(wire
 		(pts
@@ -4564,16 +4598,6 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 26.67) (xy 238.76 26.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fb49752b-b6e2-4eb1-adb1-1179f25ef01e")
-	)
-	(wire
-		(pts
 			(xy 165.1 101.6) (xy 165.1 100.33)
 		)
 		(stroke
@@ -4612,35 +4636,35 @@
 		)
 		(uuid "1acf6c21-ec9b-4237-805d-d73e710b8d93")
 	)
-	(label "SCL_3V3"
-		(at 251.46 104.14 0)
+	(label "UART_RX"
+		(at 198.12 106.68 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "1c65f5f0-d5ae-4852-8919-9a56f2fcb0ef")
+		(uuid "51521298-cbf9-4b73-a6ec-0f1d7bb6d01c")
 	)
-	(label "SDA_3V3"
-		(at 251.46 106.68 0)
+	(label "UART_TX_3V3"
+		(at 242.57 104.14 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "1d310b84-22b4-426d-8db1-64bbafe53a06")
+		(uuid "57585806-7578-4931-902d-c98e74f80bfb")
 	)
-	(label "SCL_3V3"
-		(at 228.6 26.67 0)
+	(label "UART_TX"
+		(at 198.12 104.14 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "25d0a668-5b5f-4d87-9f50-3ccc7fd51302")
+		(uuid "645d76d4-03b8-4178-a690-470cbe9de9af")
 	)
 	(label "SWDIO"
 		(at 228.6 53.34 0)
@@ -4673,24 +4697,24 @@
 		(uuid "872825c1-82c4-4943-9729-da73eb7bb5ab")
 	)
 	(label "SWDIO"
-		(at 132.08 152.4 0)
+		(at 138.43 152.4 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "88d7b0ff-75c4-4c43-8f00-1d4cf12af351")
 	)
-	(label "SDA_3V3"
-		(at 228.6 29.21 0)
+	(label "UART_TX"
+		(at 44.45 76.2 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "c35943a9-e6bd-42f8-aa3b-1ffa28672f82")
+		(uuid "a77e466a-7d38-4174-97ad-ff48effedbec")
 	)
 	(label "USER_LED2"
 		(at 21.59 114.3 0)
@@ -4723,12 +4747,12 @@
 		(uuid "df107ad4-84e0-4bb5-89f7-003a83362de4")
 	)
 	(label "SWDCLK"
-		(at 132.08 149.86 0)
+		(at 138.43 149.86 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "eacc3b16-900d-4dd6-b631-f466009ad155")
 	)
@@ -4741,6 +4765,26 @@
 			(justify left bottom)
 		)
 		(uuid "ed962cd1-deb0-40e3-a861-6d1ba23b1085")
+	)
+	(label "UART_RX"
+		(at 44.45 78.74 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "efe8ef7a-0b3c-410f-8ccd-76d7fe438413")
+	)
+	(label "UART_RX_3V3"
+		(at 242.57 106.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f99a8e46-8ca7-42d9-874b-44cc35e0e57e")
 	)
 	(label "HSE_IN"
 		(at 50.8 50.8 0)
@@ -4787,28 +4831,6 @@
 		(uuid "15be9bf6-debe-4d19-8f95-9d2e961d630f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 59.5472 25.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "SDA"
-		(shape bidirectional)
-		(at 208.28 106.68 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "1f531306-fe35-45bf-91a2-7e261e85f86e")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 200.6154 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4886,7 +4908,7 @@
 	)
 	(global_label "1V8"
 		(shape input)
-		(at 50.8 24.13 180)
+		(at 50.8 25.4 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4896,7 +4918,7 @@
 		)
 		(uuid "50145ee3-64e8-47af-8e46-82b2bdffe2a4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 44.3072 24.13 0)
+			(at 44.3072 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5214,6 +5236,28 @@
 			)
 		)
 	)
+	(global_label "BMP_IT"
+		(shape input)
+		(at 59.69 81.28 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d51f4f38-a6e7-45a9-94b1-433f834f1e0f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 50.1734 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "POX_INT"
 		(shape output)
 		(at 59.69 68.58 180)
@@ -5236,28 +5280,6 @@
 			)
 		)
 	)
-	(global_label "SCL"
-		(shape input)
-		(at 208.28 104.14 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "da0b3255-631a-4a96-ae72-7984334682ff")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 201.7872 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(symbol
 		(lib_id "power:VDD")
 		(at 161.29 132.08 0)
@@ -5267,7 +5289,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "088c1597-11b5-4e34-960a-1c2fc6ee862d")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0117"
 			(at 161.29 135.89 0)
 			(effects
 				(font
@@ -5318,7 +5340,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/ad786af7-ff00-44f4-8204-9aee6ad471a6"
-					(reference "#PWR?")
+					(reference "#PWR0117")
 					(unit 1)
 				)
 			)
@@ -5352,7 +5374,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 163.068 138.43 90)
 			(effects
 				(font
@@ -5420,7 +5442,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 148.59 146.558 90)
 			(effects
 				(font
@@ -5472,7 +5494,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1140ae86-36e2-4072-8df4-51ec2e21944d")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0103"
 			(at 140.97 71.12 0)
 			(effects
 				(font
@@ -5523,7 +5545,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/ad786af7-ff00-44f4-8204-9aee6ad471a6"
-					(reference "#PWR?")
+					(reference "#PWR0103")
 					(unit 1)
 				)
 			)
@@ -5557,7 +5579,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 40.132 85.09 90)
 			(effects
 				(font
@@ -5679,7 +5701,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "16463f26-8494-41d7-87eb-c2827076ae46")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0113"
 			(at 87.63 168.91 0)
 			(effects
 				(font
@@ -5730,7 +5752,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/ad786af7-ff00-44f4-8204-9aee6ad471a6"
-					(reference "#PWR?")
+					(reference "#PWR0113")
 					(unit 1)
 				)
 			)
@@ -5738,7 +5760,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 251.46 93.98 180)
+		(at 241.3 93.98 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5747,7 +5769,7 @@
 		(fields_autoplaced yes)
 		(uuid "191bb51d-d73d-43b8-8692-a44c8c25f6ed")
 		(property "Reference" "R23"
-			(at 254 92.7099 0)
+			(at 243.84 92.7099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5756,7 +5778,7 @@
 			)
 		)
 		(property "Value" "200"
-			(at 254 95.2499 0)
+			(at 243.84 95.2499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5764,8 +5786,8 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
-			(at 253.238 93.98 90)
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric_Pad0.64x0.40mm_HandSolder"
+			(at 243.078 93.98 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5774,7 +5796,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 251.46 93.98 0)
+			(at 241.3 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5783,7 +5805,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 251.46 93.98 0)
+			(at 241.3 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5816,7 +5838,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1b1793e7-f810-445a-9d1e-c8050cb3fc2f")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0111"
 			(at 134.62 118.11 0)
 			(effects
 				(font
@@ -5867,7 +5889,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/ad786af7-ff00-44f4-8204-9aee6ad471a6"
-					(reference "#PWR?")
+					(reference "#PWR0111")
 					(unit 1)
 				)
 			)
@@ -5901,7 +5923,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 145.7452 39.37 0)
 			(effects
 				(font
@@ -5971,7 +5993,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 183.8452 63.5 0)
 			(effects
 				(font
@@ -6041,7 +6063,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 162.2552 154.94 0)
 			(effects
 				(font
@@ -6111,7 +6133,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 144.4752 154.94 0)
 			(effects
 				(font
@@ -6181,7 +6203,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 120.3452 39.37 0)
 			(effects
 				(font
@@ -6251,7 +6273,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 133.0452 39.37 0)
 			(effects
 				(font
@@ -6321,7 +6343,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 148.2852 110.49 0)
 			(effects
 				(font
@@ -6365,7 +6387,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 259.08 87.63 0)
+		(at 248.92 87.63 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6374,7 +6396,7 @@
 		(fields_autoplaced yes)
 		(uuid "40ee7827-c362-44ef-b752-092cd88080f6")
 		(property "Reference" "#PWR033"
-			(at 259.08 91.44 0)
+			(at 248.92 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6383,7 +6405,7 @@
 			)
 		)
 		(property "Value" "3V3"
-			(at 259.08 82.55 0)
+			(at 248.92 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6391,7 +6413,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 259.08 87.63 0)
+			(at 248.92 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6400,7 +6422,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 259.08 87.63 0)
+			(at 248.92 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6409,7 +6431,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 259.08 87.63 0)
+			(at 248.92 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6438,7 +6460,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "475a6214-1e57-4da4-ac87-57b245060e0a")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0109"
 			(at 228.6 52.07 0)
 			(effects
 				(font
@@ -6489,7 +6511,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/ad786af7-ff00-44f4-8204-9aee6ad471a6"
-					(reference "#PWR?")
+					(reference "#PWR0109")
 					(unit 1)
 				)
 			)
@@ -6523,7 +6545,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 171.1452 63.5 0)
 			(effects
 				(font
@@ -6593,7 +6615,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 135.5852 110.49 0)
 			(effects
 				(font
@@ -6645,7 +6667,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4c7ff415-1efb-4ae6-a935-665e61c9e687")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0116"
 			(at 143.51 162.56 0)
 			(effects
 				(font
@@ -6696,7 +6718,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/ad786af7-ff00-44f4-8204-9aee6ad471a6"
-					(reference "#PWR?")
+					(reference "#PWR0116")
 					(unit 1)
 				)
 			)
@@ -6712,7 +6734,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "51186d83-c27d-4af9-baaf-8c4755a463ff")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0108"
 			(at 228.6 67.31 0)
 			(effects
 				(font
@@ -6763,7 +6785,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/ad786af7-ff00-44f4-8204-9aee6ad471a6"
-					(reference "#PWR?")
+					(reference "#PWR0108")
 					(unit 1)
 				)
 			)
@@ -6771,7 +6793,7 @@
 	)
 	(symbol
 		(lib_id "LSF0102V8:LSF0102TA8-7")
-		(at 233.68 96.52 0)
+		(at 223.52 96.52 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6779,7 +6801,7 @@
 		(dnp no)
 		(uuid "518a288c-4ce5-487a-a6bd-d570f3256340")
 		(property "Reference" "U8"
-			(at 233.68 92.71 0)
+			(at 223.52 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6787,7 +6809,7 @@
 			)
 		)
 		(property "Value" "~"
-			(at 233.68 95.25 0)
+			(at 223.52 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6795,7 +6817,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 233.68 96.52 0)
+			(at 223.52 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6804,7 +6826,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 233.68 96.52 0)
+			(at 223.52 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6813,7 +6835,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 233.68 96.52 0)
+			(at 223.52 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6864,7 +6886,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "55788796-6b71-4d6d-955a-afbdae6ec04a")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0104"
 			(at 39.37 69.85 0)
 			(effects
 				(font
@@ -6915,7 +6937,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/ad786af7-ff00-44f4-8204-9aee6ad471a6"
-					(reference "#PWR?")
+					(reference "#PWR0104")
 					(unit 1)
 				)
 			)
@@ -6947,7 +6969,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
 			(at 140.97 101.6 0)
 			(effects
 				(font
@@ -7017,7 +7039,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 94.9452 39.37 0)
 			(effects
 				(font
@@ -7069,7 +7091,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5b5ed317-786d-4a4f-bef4-98814aa80174")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0114"
 			(at 30.48 153.67 0)
 			(effects
 				(font
@@ -7120,7 +7142,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/ad786af7-ff00-44f4-8204-9aee6ad471a6"
-					(reference "#PWR?")
+					(reference "#PWR0114")
 					(unit 1)
 				)
 			)
@@ -7151,7 +7173,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
 			(at 154.94 57.658 90)
 			(effects
 				(font
@@ -7222,7 +7244,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
 			(at 243.84 53.34 0)
 			(effects
 				(font
@@ -7365,7 +7387,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
 			(at 21.59 140.97 0)
 			(effects
 				(font
@@ -7444,7 +7466,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
 			(at 30.48 140.97 0)
 			(effects
 				(font
@@ -7505,7 +7527,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "67e7afb2-8612-4f35-a0cb-00b548cf39d9")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0112"
 			(at 147.32 118.11 0)
 			(effects
 				(font
@@ -7556,7 +7578,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/ad786af7-ff00-44f4-8204-9aee6ad471a6"
-					(reference "#PWR?")
+					(reference "#PWR0112")
 					(unit 1)
 				)
 			)
@@ -7572,7 +7594,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6ad0c7e5-7766-45a2-92bf-52c09f9d85a3")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0101"
 			(at 144.78 48.26 0)
 			(effects
 				(font
@@ -7623,7 +7645,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/ad786af7-ff00-44f4-8204-9aee6ad471a6"
-					(reference "#PWR?")
+					(reference "#PWR0101")
 					(unit 1)
 				)
 			)
@@ -7631,7 +7653,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 213.36 97.79 0)
+		(at 203.2 97.79 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7640,7 +7662,7 @@
 		(fields_autoplaced yes)
 		(uuid "6c9352cf-d861-4e05-9ee8-4fac98cbdcd8")
 		(property "Reference" "#PWR030"
-			(at 213.36 104.14 0)
+			(at 203.2 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7649,7 +7671,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 213.36 102.87 0)
+			(at 203.2 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7658,7 +7680,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 213.36 97.79 0)
+			(at 203.2 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7667,7 +7689,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 213.36 97.79 0)
+			(at 203.2 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7676,7 +7698,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 213.36 97.79 0)
+			(at 203.2 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7724,7 +7746,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 107.6452 39.37 0)
 			(effects
 				(font
@@ -7768,7 +7790,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 228.6 34.29 0)
+		(at 248.92 111.76 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7777,7 +7799,7 @@
 		(fields_autoplaced yes)
 		(uuid "7270d4f5-1e23-4886-ba84-4fba32cebb21")
 		(property "Reference" "#PWR035"
-			(at 228.6 40.64 0)
+			(at 248.92 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7786,7 +7808,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 228.6 39.37 0)
+			(at 248.92 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7795,7 +7817,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 228.6 34.29 0)
+			(at 248.92 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7804,7 +7826,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 228.6 34.29 0)
+			(at 248.92 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7813,7 +7835,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 228.6 34.29 0)
+			(at 248.92 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7843,7 +7865,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "73282d3f-b0d5-41d5-bad8-10308608813f")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0110"
 			(at 160.02 118.11 0)
 			(effects
 				(font
@@ -7894,7 +7916,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/ad786af7-ff00-44f4-8204-9aee6ad471a6"
-					(reference "#PWR?")
+					(reference "#PWR0110")
 					(unit 1)
 				)
 			)
@@ -7925,7 +7947,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm_HandSoldering"
 			(at 39.37 55.88 0)
 			(effects
 				(font
@@ -7982,7 +8004,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "758cd4ff-d464-4d9b-be7c-634468a253d1")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0105"
 			(at 35.56 83.82 0)
 			(effects
 				(font
@@ -8033,7 +8055,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/ad786af7-ff00-44f4-8204-9aee6ad471a6"
-					(reference "#PWR?")
+					(reference "#PWR0105")
 					(unit 1)
 				)
 			)
@@ -8133,7 +8155,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 141.9352 63.5 0)
 			(effects
 				(font
@@ -8252,7 +8274,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8b1578e5-1754-45fa-8ffe-00008c64df35")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0107"
 			(at 55.88 26.67 0)
 			(effects
 				(font
@@ -8302,7 +8324,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/ad786af7-ff00-44f4-8204-9aee6ad471a6"
-					(reference "#PWR?")
+					(reference "#PWR0107")
 					(unit 1)
 				)
 			)
@@ -8334,7 +8356,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
 			(at 128.27 101.6 0)
 			(effects
 				(font
@@ -8386,7 +8408,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "939ea31d-2ff9-4656-a6f2-a710062ecb97")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0115"
 			(at 161.29 162.56 0)
 			(effects
 				(font
@@ -8437,7 +8459,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/ad786af7-ff00-44f4-8204-9aee6ad471a6"
-					(reference "#PWR?")
+					(reference "#PWR0115")
 					(unit 1)
 				)
 			)
@@ -8471,7 +8493,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 27.432 85.09 90)
 			(effects
 				(font
@@ -8541,7 +8563,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
 			(at 128.27 59.69 0)
 			(effects
 				(font
@@ -8611,7 +8633,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 28.702 130.81 90)
 			(effects
 				(font
@@ -8648,72 +8670,6 @@
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/ad786af7-ff00-44f4-8204-9aee6ad471a6"
 					(reference "R3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VDD")
-		(at 228.6 21.59 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ab5c4a2c-8cb5-49d6-baba-686296dec897")
-		(property "Reference" "#PWR034"
-			(at 228.6 25.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "3V3"
-			(at 226.822 17.272 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 228.6 21.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 228.6 21.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VDD\""
-			(at 228.6 21.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "93e48658-b14d-43b1-9cf0-2d819bc0daad")
-		)
-		(instances
-			(project "bracelet_rev1"
-				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/ad786af7-ff00-44f4-8204-9aee6ad471a6"
-					(reference "#PWR034")
 					(unit 1)
 				)
 			)
@@ -8931,7 +8887,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x04_Pin")
-		(at 243.84 26.67 0)
+		(at 264.16 104.14 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8941,7 +8897,7 @@
 		(fields_autoplaced yes)
 		(uuid "bd43bd46-d356-4e54-a64b-50a126b44c47")
 		(property "Reference" "J4"
-			(at 245.11 26.6699 0)
+			(at 265.43 104.1399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8950,7 +8906,7 @@
 			)
 		)
 		(property "Value" "Conn_01x04_Pin"
-			(at 245.11 29.2099 0)
+			(at 265.43 106.6799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8958,8 +8914,8 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
-			(at 243.84 26.67 0)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+			(at 264.16 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8968,7 +8924,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 243.84 26.67 0)
+			(at 264.16 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8977,7 +8933,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated"
-			(at 243.84 26.67 0)
+			(at 264.16 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9016,7 +8972,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c98e8377-9297-45ea-b812-fad3c1d02536")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0102"
 			(at 195.58 71.12 0)
 			(effects
 				(font
@@ -9067,7 +9023,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/ad786af7-ff00-44f4-8204-9aee6ad471a6"
-					(reference "#PWR?")
+					(reference "#PWR0102")
 					(unit 1)
 				)
 			)
@@ -9101,7 +9057,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric_Pad0.64x0.40mm_HandSolder"
 			(at 19.812 130.81 90)
 			(effects
 				(font
@@ -9145,7 +9101,7 @@
 	)
 	(symbol
 		(lib_id "power:VDD")
-		(at 208.28 93.98 0)
+		(at 198.12 93.98 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9153,7 +9109,7 @@
 		(dnp no)
 		(uuid "d2024325-c57d-4607-aca2-9335e51d0a3e")
 		(property "Reference" "#PWR031"
-			(at 208.28 97.79 0)
+			(at 198.12 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9162,7 +9118,7 @@
 			)
 		)
 		(property "Value" "1V8"
-			(at 206.502 89.662 0)
+			(at 196.342 89.662 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9171,7 +9127,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 208.28 93.98 0)
+			(at 198.12 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9180,7 +9136,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 208.28 93.98 0)
+			(at 198.12 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9189,7 +9145,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VDD\""
-			(at 208.28 93.98 0)
+			(at 198.12 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9237,7 +9193,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 160.9852 110.49 0)
 			(effects
 				(font
@@ -9305,7 +9261,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder"
 			(at 153.67 101.6 0)
 			(effects
 				(font
@@ -9375,7 +9331,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 196.5452 63.5 0)
 			(effects
 				(font
@@ -9426,7 +9382,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "ffc7f223-3860-4706-aaad-2e837ae8857f")
-		(property "Reference" "#PWR?"
+		(property "Reference" "#PWR0106"
 			(at 87.63 34.29 0)
 			(effects
 				(font
@@ -9477,7 +9433,7 @@
 		(instances
 			(project "bracelet_rev1"
 				(path "/2a7dd2e8-59c9-4d04-9427-958ca4ea7daa/ad786af7-ff00-44f4-8204-9aee6ad471a6"
-					(reference "#PWR?")
+					(reference "#PWR0106")
 					(unit 1)
 				)
 			)
