@@ -200,7 +200,7 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin power_in line
 				(at -16.51 -7.62 0)
 				(length 3.81)
 				(name "VSS"
@@ -218,7 +218,7 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin power_in line
 				(at -16.51 -10.16 0)
 				(length 3.81)
 				(name "VSS"
@@ -236,7 +236,7 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin power_in line
 				(at -16.51 -12.7 0)
 				(length 3.81)
 				(name "VSS"
