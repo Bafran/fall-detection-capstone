@@ -638,6 +638,113 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector:USB_C_Receptacle_USB2.0_14P"
 			(pin_names
 				(offset 1.016)
@@ -2410,23 +2517,27 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Mechanical:MountingHole"
+		(symbol "Mechanical:MountingHole_Pad"
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 1.016)
+				(hide yes)
 			)
 			(exclude_from_sim yes)
 			(in_bom no)
 			(on_board yes)
 			(property "Reference" "H"
-				(at 0 5.08 0)
+				(at 0 6.35 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "MountingHole"
-				(at 0 3.175 0)
+			(property "Value" "MountingHole_Pad"
+				(at 0 4.445 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -2451,7 +2562,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Mounting Hole without connection"
+			(property "Description" "Mounting Hole with connection"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2469,7 +2580,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "MountingHole*"
+			(property "ki_fp_filters" "MountingHole*Pad*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2478,9 +2589,9 @@
 					(hide yes)
 				)
 			)
-			(symbol "MountingHole_0_1"
+			(symbol "MountingHole_Pad_0_1"
 				(circle
-					(center 0 0)
+					(center 0 1.27)
 					(radius 1.27)
 					(stroke
 						(width 1.27)
@@ -2491,86 +2602,23 @@
 					)
 				)
 			)
-			(embedded_fonts no)
-		)
-		(symbol "MountingHole_1"
-			(pin_names
-				(offset 1.016)
-			)
-			(exclude_from_sim yes)
-			(in_bom no)
-			(on_board yes)
-			(property "Reference" "H"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
+			(symbol "MountingHole_Pad_1_1"
+				(pin input line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
 					)
-				)
-			)
-			(property "Value" "MountingHole"
-				(at 0 3.175 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Mounting Hole without connection"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "mounting hole"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "MountingHole*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "MountingHole_1_0_1"
-				(circle
-					(center 0 0)
-					(radius 1.27)
-					(stroke
-						(width 1.27)
-						(type default)
-					)
-					(fill
-						(type none)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
 					)
 				)
 			)
@@ -5756,16 +5804,40 @@
 		(uuid "077744cf-3f51-4e3b-b628-0741cf016e24")
 	)
 	(junction
+		(at 227.33 153.67)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0906e847-3c02-4b7d-959e-b0b933eaa710")
+	)
+	(junction
 		(at 124.46 86.36)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0b3f5a36-6ed0-46a5-b2d5-80770cd26ab2")
 	)
 	(junction
+		(at 230.124 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0db30bed-e65b-4675-b6e8-106a8624e7f0")
+	)
+	(junction
 		(at 50.8 105.41)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "10d55392-06a2-4c6b-9657-947d42b6a437")
+	)
+	(junction
+		(at 160.02 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "11a73b60-6ec5-433f-bfe2-7999263d8ff4")
+	)
+	(junction
+		(at 139.7 30.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "14d4acfb-de7e-4fd1-a29c-7373935dd5df")
 	)
 	(junction
 		(at 247.65 17.78)
@@ -5882,6 +5954,18 @@
 		(uuid "6d3222f4-5941-4853-8094-ea6f4293cff4")
 	)
 	(junction
+		(at 185.166 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6d496224-23f4-4061-904c-a1bb42e1778f")
+	)
+	(junction
+		(at 160.02 123.19)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7019710c-b242-4c4b-b28b-a7b22d08c1c2")
+	)
+	(junction
 		(at 53.34 157.48)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5948,6 +6032,12 @@
 		(uuid "9cbef435-6b5d-499f-af50-a85a3b2dd33d")
 	)
 	(junction
+		(at 134.5873 123.19)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a0a8ba35-3c75-4be7-a9fd-2c2b984cae53")
+	)
+	(junction
 		(at 226.06 25.4)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5978,10 +6068,22 @@
 		(uuid "aa3421cf-8188-4ec7-b2f1-78d4a041ff34")
 	)
 	(junction
+		(at 157.48 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ac4f8fdd-e1cc-47b7-af58-90d89fe392bc")
+	)
+	(junction
 		(at 54.61 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ada4d4e3-cbf3-4551-a984-dfdebb44780c")
+	)
+	(junction
+		(at 157.48 123.19)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b0180572-5d87-4667-aac0-1c7744699dc9")
 	)
 	(junction
 		(at 124.46 123.19)
@@ -5994,6 +6096,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b39fb713-44b3-4102-b5ff-ea827b3de040")
+	)
+	(junction
+		(at 118.11 36.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b4e56002-15f0-48ab-a6b3-efc033f91928")
 	)
 	(junction
 		(at 53.34 105.41)
@@ -6074,10 +6182,34 @@
 		(uuid "d147d36e-74a2-4528-90d1-ddcdd339c58b")
 	)
 	(junction
+		(at 175.26 109.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d1acbc75-820a-4fce-80d4-dacab9efdcc9")
+	)
+	(junction
 		(at 104.14 114.3)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d600f02d-ff41-4c57-82ab-14a9d0bb6d2f")
+	)
+	(junction
+		(at 233.68 109.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d704c785-b320-4029-9ccf-4f35cae99922")
+	)
+	(junction
+		(at 69.85 175.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "db8d0ec2-82d2-4d36-936f-0e711cdcf842")
+	)
+	(junction
+		(at 71.12 36.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dc24b2e6-9550-40c3-9fc4-470d7919119f")
 	)
 	(junction
 		(at 35.56 157.48)
@@ -6235,7 +6367,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 36.83) (xy 127 36.83)
+			(xy 109.22 36.83) (xy 118.11 36.83)
 		)
 		(stroke
 			(width 0)
@@ -6312,16 +6444,6 @@
 			(type default)
 		)
 		(uuid "169842aa-8e4c-42cb-b790-8c1f8ad53060")
-	)
-	(wire
-		(pts
-			(xy 107.95 165.1) (xy 120.65 165.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "16e3ea48-5605-4b5e-b0b7-bccf6280933f")
 	)
 	(wire
 		(pts
@@ -6485,7 +6607,7 @@
 	)
 	(wire
 		(pts
-			(xy 223.52 153.67) (xy 240.03 153.67)
+			(xy 223.52 153.67) (xy 227.33 153.67)
 		)
 		(stroke
 			(width 0)
@@ -6705,7 +6827,7 @@
 	)
 	(wire
 		(pts
-			(xy 173.99 109.22) (xy 199.39 109.22)
+			(xy 173.99 109.22) (xy 175.26 109.22)
 		)
 		(stroke
 			(width 0)
@@ -6795,6 +6917,16 @@
 	)
 	(wire
 		(pts
+			(xy 118.11 36.83) (xy 127 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "534b5995-663a-4464-849f-42ca279ec696")
+	)
+	(wire
+		(pts
 			(xy 222.25 34.29) (xy 232.41 34.29)
 		)
 		(stroke
@@ -6802,6 +6934,16 @@
 			(type default)
 		)
 		(uuid "545139ce-84e4-44e3-810b-37df8461ce95")
+	)
+	(wire
+		(pts
+			(xy 230.124 104.14) (xy 245.11 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "555843b3-9c58-40b0-863c-2f20f7383885")
 	)
 	(wire
 		(pts
@@ -6925,7 +7067,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 123.19) (xy 134.62 123.19)
+			(xy 132.08 123.19) (xy 134.5873 123.19)
 		)
 		(stroke
 			(width 0)
@@ -7055,13 +7197,23 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 104.14) (xy 199.39 104.14)
+			(xy 182.88 104.14) (xy 185.166 104.14)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "707dab0c-6d2a-4f4c-90a6-3e0ef975940a")
+	)
+	(wire
+		(pts
+			(xy 71.12 36.83) (xy 80.01 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "712bf80a-fb5c-4097-ac21-b7a1fcbcb004")
 	)
 	(wire
 		(pts
@@ -7072,6 +7224,16 @@
 			(type default)
 		)
 		(uuid "713e5fd7-db2b-4e46-92e9-502935a5e96f")
+	)
+	(wire
+		(pts
+			(xy 175.26 109.22) (xy 199.39 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7651fffd-e214-4fbf-ae7e-1a839ac687e3")
 	)
 	(wire
 		(pts
@@ -7115,16 +7277,6 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 162.56) (xy 120.65 162.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7c83f531-6397-4979-aeb6-ab4281e8b7a0")
-	)
-	(wire
-		(pts
 			(xy 95.25 180.34) (xy 95.25 184.15)
 		)
 		(stroke
@@ -7155,7 +7307,7 @@
 	)
 	(wire
 		(pts
-			(xy 219.71 104.14) (xy 245.11 104.14)
+			(xy 219.71 104.14) (xy 230.124 104.14)
 		)
 		(stroke
 			(width 0)
@@ -7192,6 +7344,16 @@
 			(type default)
 		)
 		(uuid "846795c6-5131-4fce-bef4-df4ce57a63c0")
+	)
+	(wire
+		(pts
+			(xy 233.68 109.22) (xy 255.27 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "863e305d-d6d9-49bb-9ffa-162a0396ebbe")
 	)
 	(wire
 		(pts
@@ -7405,6 +7567,16 @@
 	)
 	(wire
 		(pts
+			(xy 160.02 86.36) (xy 160.02 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9576c874-e9cc-427b-ae29-d87309e2445e")
+	)
+	(wire
+		(pts
 			(xy 255.27 88.9) (xy 245.11 88.9)
 		)
 		(stroke
@@ -7485,6 +7657,16 @@
 	)
 	(wire
 		(pts
+			(xy 105.41 160.02) (xy 120.65 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a8c7f08-779f-42e6-ba7f-ec90f046283e")
+	)
+	(wire
+		(pts
 			(xy 53.34 154.94) (xy 53.34 157.48)
 		)
 		(stroke
@@ -7535,16 +7717,6 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 160.02) (xy 120.65 160.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a14c6993-923f-4489-9609-c36bfc4787d2")
-	)
-	(wire
-		(pts
 			(xy 60.96 73.66) (xy 66.04 73.66)
 		)
 		(stroke
@@ -7562,6 +7734,16 @@
 			(type default)
 		)
 		(uuid "a2d6cf57-61ba-4baa-b1b7-0a8c6139ec74")
+	)
+	(wire
+		(pts
+			(xy 69.85 175.26) (xy 72.39 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a319ca1e-6924-480f-b378-ca43bf79e0da")
 	)
 	(wire
 		(pts
@@ -7605,7 +7787,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 121.92) (xy 74.93 121.92)
+			(xy 66.04 121.92) (xy 76.2 121.92)
 		)
 		(stroke
 			(width 0)
@@ -7715,7 +7897,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 124.46) (xy 74.93 124.46)
+			(xy 66.04 124.46) (xy 76.2 124.46)
 		)
 		(stroke
 			(width 0)
@@ -7875,6 +8057,16 @@
 	)
 	(wire
 		(pts
+			(xy 107.95 162.56) (xy 120.65 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d690a1ca-c504-44ed-af1c-34c593fbd92b")
+	)
+	(wire
+		(pts
 			(xy 35.56 121.92) (xy 35.56 124.46)
 		)
 		(stroke
@@ -7965,7 +8157,7 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 36.83) (xy 80.01 36.83)
+			(xy 62.23 36.83) (xy 71.12 36.83)
 		)
 		(stroke
 			(width 0)
@@ -7985,7 +8177,7 @@
 	)
 	(wire
 		(pts
-			(xy 219.71 109.22) (xy 255.27 109.22)
+			(xy 219.71 109.22) (xy 233.68 109.22)
 		)
 		(stroke
 			(width 0)
@@ -8022,6 +8214,16 @@
 			(type default)
 		)
 		(uuid "e4de0bc1-0560-4552-9622-1a3354cc9e2d")
+	)
+	(wire
+		(pts
+			(xy 134.5873 123.19) (xy 134.62 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e5656d53-b613-4bab-8e68-b08130e2bdca")
 	)
 	(wire
 		(pts
@@ -8082,6 +8284,16 @@
 			(type default)
 		)
 		(uuid "ed76b4bb-7c2c-4d60-afba-c6afc37a6ce4")
+	)
+	(wire
+		(pts
+			(xy 107.95 165.1) (xy 120.65 165.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef10e0f7-bd3e-4f5b-9062-a9294b604f40")
 	)
 	(wire
 		(pts
@@ -8175,6 +8387,16 @@
 	)
 	(wire
 		(pts
+			(xy 160.02 123.19) (xy 160.02 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f903ecf2-4659-4ef1-8fa3-ab23634a7838")
+	)
+	(wire
+		(pts
 			(xy 137.16 52.07) (xy 143.51 52.07)
 		)
 		(stroke
@@ -8195,7 +8417,27 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 175.26) (xy 72.39 175.26)
+			(xy 185.166 104.14) (xy 199.39 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb176ec3-1d04-45ce-bece-b4600b6e3681")
+	)
+	(wire
+		(pts
+			(xy 227.33 153.67) (xy 240.03 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd160e6e-1a31-4344-a74e-c0cc5a26532a")
+	)
+	(wire
+		(pts
+			(xy 63.5 175.26) (xy 69.85 175.26)
 		)
 		(stroke
 			(width 0)
@@ -8632,6 +8874,73 @@
 			(justify left bottom)
 		)
 		(uuid "f68b2d22-8542-4e2d-aad8-08a77b44f990")
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 264.16 107.95 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "000e441f-1117-480f-929b-560c312d131c")
+		(property "Reference" "H3"
+			(at 266.7 105.4099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 266.7 107.9499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_Pad_Via"
+			(at 264.16 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 264.16 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 264.16 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "58840461-5cf3-4bc4-b261-b36171a9aa76")
+		)
+		(instances
+			(project "esp_module_rev1"
+				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
+					(reference "H3")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -9180,6 +9489,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 230.124 104.14 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "14904bbc-f282-46b7-822f-14ed02ecaf0f")
+		(property "Reference" "TP8"
+			(at 231.394 100.838 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 232.664 102.1079 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 235.204 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 235.204 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 230.124 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a4e45786-3051-40bf-b700-eec81541f52c")
+		)
+		(instances
+			(project "esp_module_rev1"
+				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
+					(reference "TP8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 29.21 109.22 0)
 		(unit 1)
@@ -9323,6 +9699,74 @@
 			(project ""
 				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
 					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 134.62 86.36 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1b3ca2d7-c40a-4a3f-83b0-85790f66baad")
+		(property "Reference" "TP4"
+			(at 137.16 81.7879 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 137.16 84.3279 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 139.7 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 139.7 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 134.62 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "af3d8af5-33a4-4002-9e31-ce87a7cc8b01")
+		)
+		(instances
+			(project "esp_module_rev1"
+				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
+					(reference "TP4")
 					(unit 1)
 				)
 			)
@@ -9595,6 +10039,74 @@
 			(project "esp_module_rev1"
 				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
 					(reference "#PWR0148")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 139.7 30.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "243bf48a-e203-4702-a756-a575895dc900")
+		(property "Reference" "TP1"
+			(at 142.24 25.9079 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 142.24 28.4479 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 144.78 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 144.78 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 139.7 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "35dde9e1-2012-45bf-ad96-a6ac91f4a512")
+		)
+		(instances
+			(project ""
+				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
+					(reference "TP1")
 					(unit 1)
 				)
 			)
@@ -10010,70 +10522,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 266.7 101.6 0)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2cd8e448-6a4e-4473-808c-de9e4b7e2452")
-		(property "Reference" "H3"
-			(at 269.24 100.3299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MountingHole"
-			(at 269.24 102.8699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
-			(at 266.7 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 266.7 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole without connection"
-			(at 266.7 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "esp_module_rev1"
-				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
-					(reference "H3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:PWR_FLAG")
 		(at 95.25 36.83 0)
 		(unit 1)
@@ -10311,6 +10759,73 @@
 			(project "esp_module_rev1"
 				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
 					(reference "R10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 76.2 124.46 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3129b75c-d147-4656-89c1-e90428b22b10")
+		(property "Reference" "TP15"
+			(at 83.312 124.46 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 78.2321 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 76.2 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 76.2 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 76.2 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "98d1c801-5793-401b-9d31-52741c5a8325")
+		)
+		(instances
+			(project "esp_module_rev1"
+				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
+					(reference "TP15")
 					(unit 1)
 				)
 			)
@@ -10729,6 +11244,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 160.02 134.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3b47605d-2c0c-44a6-a0bf-7ec747c3777a")
+		(property "Reference" "#PWR0158"
+			(at 160.02 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 160.02 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 160.02 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 160.02 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "49c39f0e-343d-470d-94d7-46badc416102")
+		)
+		(instances
+			(project "esp_module_rev1"
+				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
+					(reference "#PWR0158")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+1V8")
 		(at 115.57 171.45 0)
 		(unit 1)
@@ -10855,6 +11437,74 @@
 			(project "esp_module_rev1"
 				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
 					(reference "R20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 227.33 153.67 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "45961913-d05c-4f21-b6ce-19916ff174b8")
+		(property "Reference" "TP11"
+			(at 229.87 156.9719 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 224.79 155.7021 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 222.25 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 222.25 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 227.33 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bf46dd19-eb23-4cc6-8499-07d4fd504bb4")
+		)
+		(instances
+			(project "esp_module_rev1"
+				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
+					(reference "TP11")
 					(unit 1)
 				)
 			)
@@ -11475,6 +12125,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 160.02 97.79 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5b502958-b325-480a-b62d-8fef89bce5bc")
+		(property "Reference" "C22"
+			(at 156.718 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1uF"
+			(at 156.718 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 159.0548 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 160.02 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 160.02 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "537df65e-cb64-4416-a752-c8293fa9281f")
+		)
+		(pin "2"
+			(uuid "e27b5bb6-d0c5-449b-9895-02829a20f2d7")
+		)
+		(instances
+			(project "esp_module_rev1"
+				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
+					(reference "C22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 226.06 25.4 0)
 		(unit 1)
@@ -11675,17 +12395,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 266.7 88.9 0)
+		(lib_id "Connector:TestPoint")
+		(at 71.12 36.83 0)
 		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
+		(exclude_from_sim no)
+		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "60824dc0-8a59-49ca-b27f-c78cd17f8144")
-		(property "Reference" "H1"
-			(at 269.24 87.6299 0)
+		(uuid "609736bc-2bb0-4eb0-94b6-f28181a83056")
+		(property "Reference" "TP16"
+			(at 73.66 32.2579 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11693,17 +12413,18 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MountingHole"
-			(at 269.24 90.1699 0)
+		(property "Value" "TestPoint"
+			(at 73.66 34.7979 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
-			(at 266.7 88.9 0)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 76.2 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11712,7 +12433,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 266.7 88.9 0)
+			(at 76.2 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11720,19 +12441,22 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Mounting Hole without connection"
-			(at 266.7 88.9 0)
+		(property "Description" "test point"
+			(at 71.12 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
+		)
+		(pin "1"
+			(uuid "10f5b192-2bea-4cdb-8d63-8922c0349acd")
 		)
 		(instances
-			(project ""
+			(project "esp_module_rev1"
 				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
-					(reference "H1")
+					(reference "TP16")
 					(unit 1)
 				)
 			)
@@ -12352,6 +13076,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 157.48 123.19 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "740c79fd-871a-43ac-9c1f-8efd54f3be67")
+		(property "Reference" "TP3"
+			(at 155.956 129.032 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 154.94 125.2221 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 152.4 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 152.4 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 157.48 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cebfc408-0247-425e-9a54-1c16a0da85dd")
+		)
+		(instances
+			(project "esp_module_rev1"
+				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
+					(reference "TP3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 213.36 161.29 0)
 		(unit 1)
@@ -12627,6 +13418,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 69.85 175.26 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "77c2f280-5ed1-4f3a-aa28-bfc8974945f7")
+		(property "Reference" "TP12"
+			(at 72.39 178.5619 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 67.31 177.2921 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 64.77 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 64.77 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 69.85 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "010cbec3-a650-48fd-8db7-7e7bcd1c602f")
+		)
+		(instances
+			(project "esp_module_rev1"
+				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
+					(reference "TP12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 212.09 59.69 270)
 		(unit 1)
@@ -12690,6 +13549,73 @@
 			(project "esp_module_rev1"
 				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
 					(reference "R12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 160.02 101.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "80815e9a-3675-43fa-ac1f-f8919a27256d")
+		(property "Reference" "#PWR0157"
+			(at 160.02 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 160.02 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 160.02 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 160.02 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c6a42910-867f-41c4-b0c7-b5844ea773ca")
+		)
+		(instances
+			(project "esp_module_rev1"
+				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
+					(reference "#PWR0157")
 					(unit 1)
 				)
 			)
@@ -12960,6 +13886,142 @@
 			(project "esp_module_rev1"
 				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
 					(reference "#PWR0114")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 118.11 36.83 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8a03d60b-d902-4f2f-9954-e90cee84b177")
+		(property "Reference" "TP17"
+			(at 120.65 32.2579 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 120.65 34.7979 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 123.19 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 123.19 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 118.11 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "249d467b-5cb6-46b7-8d9f-4bdbc3f58980")
+		)
+		(instances
+			(project "esp_module_rev1"
+				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
+					(reference "TP17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 186.69 29.21 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8a7a6cfa-ebdf-420f-b52e-bdc0d278443e")
+		(property "Reference" "TP19"
+			(at 191.77 29.2099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 188.7221 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 186.69 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 186.69 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 186.69 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0d035424-caac-49b0-b228-a3ff00913754")
+		)
+		(instances
+			(project "esp_module_rev1"
+				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
+					(reference "TP19")
 					(unit 1)
 				)
 			)
@@ -13959,6 +15021,342 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 264.16 87.63 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a0fd07af-19fb-4001-9a39-2ea46d4eee7d")
+		(property "Reference" "H1"
+			(at 266.7 85.0899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 266.7 87.6299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_Pad_Via"
+			(at 264.16 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 264.16 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 264.16 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c976bf76-563e-4132-9057-e2660cceabfd")
+		)
+		(instances
+			(project ""
+				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
+					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 264.16 97.79 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a22c2c2f-1996-4e5b-8d73-70eedab138d0")
+		(property "Reference" "H2"
+			(at 266.7 95.2499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 266.7 97.7899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_Pad_Via"
+			(at 264.16 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 264.16 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 264.16 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "855b15e2-24bb-42d8-9c0c-104aefe8d0b5")
+		)
+		(instances
+			(project "esp_module_rev1"
+				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
+					(reference "H2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 264.16 100.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a43441b1-42db-4780-90a2-6ad5a0c42686")
+		(property "Reference" "#PWR0155"
+			(at 264.16 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 264.16 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 264.16 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 264.16 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 264.16 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "296b48a0-6a17-4807-9e27-5098b9fd0e55")
+		)
+		(instances
+			(project "esp_module_rev1"
+				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
+					(reference "#PWR0155")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 233.68 109.22 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a5b73a50-a957-4d78-b4e3-3fd77d63200d")
+		(property "Reference" "TP9"
+			(at 236.22 112.5219 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 231.14 111.2521 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 228.6 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 228.6 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 233.68 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e7ce0647-1e31-44e3-af65-196a90d67927")
+		)
+		(instances
+			(project "esp_module_rev1"
+				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
+					(reference "TP9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 157.48 86.36 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a99585cd-e7f9-40a5-b3b7-c5ca33b70870")
+		(property "Reference" "TP2"
+			(at 155.956 92.202 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 154.94 88.3921 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 152.4 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 152.4 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 157.48 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5d9d042f-925a-48de-9d66-670c92e8c431")
+		)
+		(instances
+			(project "esp_module_rev1"
+				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
+					(reference "TP2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 176.53 22.86 0)
 		(unit 1)
@@ -14461,6 +15859,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 134.5873 123.19 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b4e2f738-e5e9-46e2-899a-886e220b3edb")
+		(property "Reference" "TP5"
+			(at 137.1273 118.6179 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 137.1273 121.1579 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 139.6673 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 139.6673 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 134.5873 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "df077592-b5e0-40fb-81a4-12d4835eaa51")
+		)
+		(instances
+			(project "esp_module_rev1"
+				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
+					(reference "TP5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 29.21 113.03 0)
 		(unit 1)
@@ -14670,6 +16136,139 @@
 			(project ""
 				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
 					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 105.41 160.02 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bb621cc9-b79a-4ca0-8857-2655ea4e553c")
+		(property "Reference" "TP13"
+			(at 98.298 160.02 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 103.3779 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 105.41 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 105.41 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 105.41 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e92b46ae-c2ea-40f5-83cf-dabef8a7032e")
+		)
+		(instances
+			(project "esp_module_rev1"
+				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
+					(reference "TP13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 76.2 121.92 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c2ffaa3a-f030-48f2-996d-294a3e400c3a")
+		(property "Reference" "TP14"
+			(at 83.312 121.92 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 78.2321 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 76.2 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 76.2 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 76.2 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e614a7be-3262-4c50-bd26-34bb9f68a4da")
+		)
+		(instances
+			(project "esp_module_rev1"
+				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
+					(reference "TP14")
 					(unit 1)
 				)
 			)
@@ -14944,18 +16543,17 @@
 		)
 	)
 	(symbol
-		(lib_name "MountingHole_1")
-		(lib_id "Mechanical:MountingHole")
-		(at 266.7 95.25 0)
+		(lib_id "Connector:TestPoint")
+		(at 175.26 109.22 0)
 		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
+		(exclude_from_sim no)
+		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "c9dec8ab-e23c-4edc-a2a0-31829f114d5b")
-		(property "Reference" "H2"
-			(at 269.24 93.9799 0)
+		(uuid "ca8142b6-141b-4bec-a501-9a3c9dd9a6c4")
+		(property "Reference" "TP7"
+			(at 177.8 104.6479 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14963,17 +16561,18 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MountingHole"
-			(at 269.24 96.5199 0)
+		(property "Value" "TestPoint"
+			(at 177.8 107.1879 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
-			(at 266.7 95.25 0)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 180.34 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14982,7 +16581,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 266.7 95.25 0)
+			(at 180.34 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14990,19 +16589,22 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Mounting Hole without connection"
-			(at 266.7 95.25 0)
+		(property "Description" "test point"
+			(at 175.26 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
+		)
+		(pin "1"
+			(uuid "cee62ea1-f20f-4f75-8399-cb72a8f9d571")
 		)
 		(instances
 			(project "esp_module_rev1"
 				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
-					(reference "H2")
+					(reference "TP7")
 					(unit 1)
 				)
 			)
@@ -15072,6 +16674,73 @@
 			(project "esp_module_rev1"
 				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
 					(reference "C17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 264.16 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cdd8ecc9-1f34-4b4c-a521-cc3cdf6533a0")
+		(property "Reference" "#PWR0154"
+			(at 264.16 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 264.16 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 264.16 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 264.16 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 264.16 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "26c64cb7-7d70-4f8b-92e9-62f1ad9166a5")
+		)
+		(instances
+			(project "esp_module_rev1"
+				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
+					(reference "#PWR0154")
 					(unit 1)
 				)
 			)
@@ -15596,6 +17265,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 227.33 133.35 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d43d1432-aa71-4f44-a7e5-be0d9d24f44d")
+		(property "Reference" "TP10"
+			(at 229.87 128.7779 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 229.87 131.3179 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 232.41 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 232.41 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 227.33 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "432ac04a-4584-4054-a534-57749314fc82")
+		)
+		(instances
+			(project "esp_module_rev1"
+				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
+					(reference "TP10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 115.57 184.15 0)
 		(unit 1)
@@ -15657,6 +17394,73 @@
 			(project "esp_module_rev1"
 				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
 					(reference "#PWR0105")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 185.166 104.14 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d7e78f0f-6b3c-4135-af8f-ea7c6ab0d1ca")
+		(property "Reference" "TP6"
+			(at 186.436 100.584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 187.706 102.1079 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 190.246 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 190.246 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 185.166 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e84fbba5-9d81-42ec-b3ef-3f59954dd73f")
+		)
+		(instances
+			(project "esp_module_rev1"
+				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
+					(reference "TP6")
 					(unit 1)
 				)
 			)
@@ -16008,6 +17812,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 160.02 130.81 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e2e1444e-6557-47e4-adfe-253c3edb1471")
+		(property "Reference" "C23"
+			(at 155.956 133.096 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1uF"
+			(at 155.956 135.636 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 159.0548 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 160.02 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 160.02 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1d24b7e8-4e7e-4bf3-a8e0-e6ea6df0b56a")
+		)
+		(pin "2"
+			(uuid "b355d098-2425-445e-b5db-6c68198a7bf1")
+		)
+		(instances
+			(project "esp_module_rev1"
+				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
+					(reference "C23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+BATT")
 		(at 124.46 72.39 0)
 		(unit 1)
@@ -16133,6 +18007,74 @@
 			(project "esp_module_rev1"
 				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
 					(reference "#PWR0115")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 193.04 62.23 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e5b69bbe-ee8a-4760-9597-aecdb69521d7")
+		(property "Reference" "TP18"
+			(at 198.12 62.2299 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 195.0721 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm"
+			(at 193.04 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 193.04 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 193.04 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0bab8115-05e9-4eed-a55b-dd0297e54150")
+		)
+		(instances
+			(project "esp_module_rev1"
+				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
+					(reference "TP18")
 					(unit 1)
 				)
 			)
@@ -17183,6 +19125,73 @@
 			(project ""
 				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
 					(reference "U10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 264.16 110.49 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ffbe7652-3fa0-4bc9-ac63-2687ec8b32d7")
+		(property "Reference" "#PWR0156"
+			(at 264.16 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 264.16 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 264.16 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 264.16 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 264.16 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "626c8a58-c386-43a7-8e2d-7e4b54be152e")
+		)
+		(instances
+			(project "esp_module_rev1"
+				(path "/a50c7f22-d58b-461b-a9eb-82a2c8676dcc"
+					(reference "#PWR0156")
 					(unit 1)
 				)
 			)
