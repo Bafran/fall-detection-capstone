@@ -1,0 +1,10 @@
+Ref,Val,Package,PosX,PosY,Rot,Side
+"C16","4u7","C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",146.300000,-96.537500,90.000000,bottom
+"C17","0u1","C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",144.700000,-96.537500,90.000000,bottom
+"C18","0u1","C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",144.700000,-100.037500,-90.000000,bottom
+"C19","10u","C_0603_1608Metric_Pad1.08x0.95mm_HandSolder",146.300000,-100.037500,-90.000000,bottom
+"R4","5k1","R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",149.500000,-119.500000,-90.000000,bottom
+"R5","5k1","R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",146.500000,-119.500000,-90.000000,bottom
+"R14","5k1","R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",140.200000,-85.500000,-90.000000,bottom
+"R23","5k1","R_0603_1608Metric_Pad0.98x0.95mm_HandSolder",152.700000,-84.600000,0.000000,bottom
+"U9","MAX30102","Maxim_OLGA-14_3.3x5.6mm_P0.8mm",149.500000,-96.000000,180.000000,bottom
