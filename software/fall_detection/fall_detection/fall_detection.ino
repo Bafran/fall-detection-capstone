@@ -21,6 +21,26 @@ WiFiUDP udp;
 const char* DEVICE_ID = "chest";
 const uint32_t SAMPLE_PERIOD_MS = 10;  // ~100 Hz
 
+// --- Fall detection state machine ---
+enum FallState { IDLE, IMPACT_DETECTED, CONFIRMED };
+FallState fall_state = IDLE;
+
+int64_t impact_time_us = 0;
+bool stillness_met = false;
+
+// thresholds (tune later)
+const float IMPACT_A_THR = 25.0f;     // m/s^2  (~2.5 g)
+const float IMPACT_W_THR = 6.0f;      // rad/s  (~343 deg/s)
+const float STILL_W_THR  = 1.0f;      // rad/s
+const float STILL_A_BAND = 2.0f;      // around 9.81 m/s^2
+const int64_t STILLNESS_TIME_US = 1500000; // 1.5 s
+const int64_t COOLDOWN_US = 5000000;       // 5 s cooldown after a fall
+int64_t last_fall_sent_us = -1000000000LL;
+
+static inline float mag3f(float x, float y, float z) {
+  return sqrtf(x*x + y*y + z*z);
+}
+
 void setup(void) {
   pinMode(USER_LED, OUTPUT);
   // Set LED high
@@ -221,24 +241,69 @@ void loop() {
   sensors_event_t accel, gyro, temp;
   lsm6ds.getEvent(&accel, &gyro, &temp);
 
+  float a_mag = mag3f(accel.acceleration.x, accel.acceleration.y, accel.acceleration.z);
+  float w_mag = mag3f(gyro.gyro.x, gyro.gyro.y, gyro.gyro.z);
+
+  // --- Simple on-board fall detector ---
+  // cooldown guard
+  bool in_cooldown = (t_us - last_fall_sent_us) < COOLDOWN_US;
+
+  if (!in_cooldown) {
+    switch (fall_state) {
+      case IDLE:
+        if (a_mag > IMPACT_A_THR || w_mag > IMPACT_W_THR) {
+          fall_state = IMPACT_DETECTED;
+          impact_time_us = t_us;
+          stillness_met = false;
+          Serial.println("[FALL] Impact detected");
+        }
+        break;
+
+      case IMPACT_DETECTED: {
+        // check stillness condition
+        bool still_now = (w_mag < STILL_W_THR) && (fabsf(a_mag - 9.81f) < STILL_A_BAND);
+
+        if (still_now) {
+          // if we continuously see stillness after impact long enough, confirm
+          if ((t_us - impact_time_us) > STILLNESS_TIME_US) {
+            fall_state = CONFIRMED;
+          }
+        }
+
+        // timeout: if no stillness within 3 seconds, cancel
+        if ((t_us - impact_time_us) > 3000000) {
+          fall_state = IDLE;
+        }
+        break;
+      }
+
+      case CONFIRMED:
+        // we will send an event below, then reset
+        break;
+    }
+  }
+
   int64_t t_us = esp_timer_get_time();  // microseconds since boot
 
   // Build UDP message
-  char buf[220];
-  int n = snprintf(
-    buf, sizeof(buf),
-    "%s,%lld,%.6f,%.6f,%.6f,%.6f,%.6f,%.6f,%.2f",
-    DEVICE_ID,
-    (long long)t_us,
-    accel.acceleration.x, accel.acceleration.y, accel.acceleration.z,
-    gyro.gyro.x, gyro.gyro.y, gyro.gyro.z,
-    temp.temperature
-  );
+  if (fall_state == CONFIRMED) {
+    last_fall_sent_us = t_us;
 
-  // Send UDP packet
-  udp.beginPacket(SERVER_IP, SERVER_PORT);
-  udp.write((uint8_t*)buf, n);
-  udp.endPacket();
+    char eventbuf[180];
+    int en = snprintf(
+      eventbuf, sizeof(eventbuf),
+      "event,fall_confirmed,%s,%lld,%.2f,%.2f",
+      DEVICE_ID, (long long)t_us, a_mag, w_mag
+    );
+
+    udp.beginPacket(SERVER_IP, SERVER_PORT);
+    udp.write((uint8_t*)eventbuf, en);
+    udp.endPacket();
+
+    Serial.println("[FALL] CONFIRMED -> event sent");
+    fall_state = IDLE;
+  }
+
 
   packet_count++;
 
@@ -250,12 +315,10 @@ void loop() {
     Serial.print(packet_count);
     Serial.print("  t_us=");
     Serial.print((long long)t_us);
-    Serial.print("  ax=");
-    Serial.print(accel.acceleration.x, 3);
-    Serial.print(" ay=");
-    Serial.print(accel.acceleration.y, 3);
-    Serial.print(" az=");
-    Serial.print(accel.acceleration.z, 3);
+    Serial.print(" |a|=");
+    Serial.print(a_mag, 2);
+    Serial.print(" |w|=");
+    Serial.print(w_mag, 2);
     Serial.print("  WiFi=");
     Serial.println(WiFi.status() == WL_CONNECTED ? "OK" : "DISCONNECTED");
   }
