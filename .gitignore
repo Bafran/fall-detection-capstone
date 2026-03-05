@@ -1,2 +1,3 @@
 .venv
 software/fall_detection/fall_detection/secrets.h
+software/fall_dashboard/node_modules
