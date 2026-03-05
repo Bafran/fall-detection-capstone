@@ -1,0 +1,101 @@
+.sc-card{
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 14px;
+}
+
+.sc-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.sc-title{
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.sc-icon{
+  width:32px;
+  height:32px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:10px;
+  background:rgba(17,24,39,.05);
+
+  color:#334155;
+}
+
+.sc-iconWrap{
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.sc-value{
+  font-size: 22px;
+  font-weight: 800;
+  margin-top: 6px;
+}
+
+.sc-sub{
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* Heart pulse */
+.sc-heart{
+  color: #ef4444;
+  animation: scPulse 1.1s infinite;
+}
+
+@keyframes scPulse{
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.18); }
+  100% { transform: scale(1); }
+}
+
+/* Battery bar */
+.sc-battery{
+  margin-top: 10px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.sc-batteryBar{
+  flex:1;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(17,24,39,.08);
+  overflow:hidden;
+}
+
+.sc-batteryFill{
+  height: 100%;
+  border-radius: 999px;
+  background: rgba(20,184,166,.95); /* teal-ish fill */
+  transition: width 600ms ease;
+}
+
+.sc-batteryMeta{
+  font-size: 12px;
+  color: var(--muted);
+  min-width: 36px;
+  text-align:right;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .sc-heart{ animation: none; }
+  .sc-batteryFill{ transition: none; }
+}
