@@ -3,6 +3,7 @@ import { useParams, Navigate } from "react-router-dom"
 import { haversineMeters } from "../utils/geo.js"
 import { getPatientById } from "../data/patients.js"
 import useBrowserLocation from "../hooks/useBrowserLocation.js"
+import useFallState from "../hooks/useFallState.js"
 import Sidebar from "../components/layout/Sidebar.jsx"
 import Topbar from "../components/layout/Topbar.jsx"
 import StatusCard from "../components/cards/StatusCard.jsx"
@@ -16,6 +17,7 @@ export default function Dashboard() {
   if (!patient) return <Navigate to="/patients" replace />
 
   const loc = useBrowserLocation()
+  const fallState = useFallState()
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
 
   const [safeZone, setSafeZone] = useState({
@@ -40,6 +42,38 @@ export default function Dashboard() {
   const safeZoneTone =
     insideSafeZone == null ? "neutral" : insideSafeZone ? "ok" : "danger"
 
+  const fallEvent = fallState?.last_event
+  const fallDetected = fallEvent === "fall_confirmed"
+  const fallCardValue = fallDetected ? "Fall detected" : "Safe"
+  const fallCardTone = fallDetected ? "danger" : "ok"
+
+  let fallCardSub = "No recent falls"
+  let fallEventLogEntry = null
+  if (fallState?.updated_at) {
+    const dt = new Date(fallState.updated_at * 1000)
+    const timeStr = dt.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
+    if (fallDetected) {
+      fallCardSub = `Last fall: ${timeStr}`
+      fallEventLogEntry = {
+        time: timeStr,
+        msg: `Fall confirmed from ${fallState.last_device ?? "device"}`,
+        tone: "danger",
+      }
+    } else {
+      fallCardSub = `Last update: ${timeStr}`
+    }
+  } else if (!fallState) {
+    fallCardSub = "Waiting for device data…"
+  }
+
+  const baseEvents = [
+    { time: "11:45", msg: "Location refreshed", tone: "neutral" },
+    { time: "11:32", msg: "Entered safe zone: Home", tone: "ok" },
+    { time: "10:58", msg: "Device battery: 82%", tone: "neutral" },
+  ]
+
+  const events = fallEventLogEntry ? [fallEventLogEntry, ...baseEvents] : baseEvents
+
   return (
     <div
       style={{
@@ -56,9 +90,9 @@ export default function Dashboard() {
         <section style={styles.cards}>
           <StatusCard
             title="Fall Detection"
-            value="Safe"
-            tone="ok"
-            sub="Last check: 1 min ago"
+            value={fallCardValue}
+            tone={fallCardTone}
+            sub={fallCardSub}
             icon="shield"
           />
 
@@ -99,7 +133,7 @@ export default function Dashboard() {
             patient={patient}
             safeZoneValue={safeZoneValue}
           />
-          <EventLog />
+          <EventLog events={events} />
         </section>
       </main>
     </div>

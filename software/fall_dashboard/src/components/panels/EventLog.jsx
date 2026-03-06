@@ -1,17 +1,18 @@
-const events = [
+const defaultEvents = [
   { time: "11:45", msg: "Location refreshed", tone: "neutral" },
   { time: "11:32", msg: "Entered safe zone: Home", tone: "ok" },
   { time: "10:58", msg: "Device battery: 82%", tone: "neutral" },
 ]
 
-export default function EventLog() {
+export default function EventLog({ events }) {
+  const items = events ?? defaultEvents
   return (
     <section style={styles.panel}>
       <div style={styles.head}>
         <div style={{ fontWeight: 700 }}>Recent Events</div>
       </div>
       <div style={styles.body}>
-        {events.map((e, i) => (
+        {items.map((e, i) => (
           <div key={i} style={styles.item}>
             <div style={styles.time}>{e.time}</div>
             <div style={styles.msg}>{e.msg}</div>
