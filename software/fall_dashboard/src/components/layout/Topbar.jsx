@@ -1,9 +1,12 @@
-export default function Topbar() {
+export default function Topbar({ patient }) {
+  const title = patient ? `${patient.name}'s Dashboard` : "Patients"
+  const subtitle = patient ? "Location, safety, and vitals" : "Select a patient to view their dashboard"
+
   return (
     <header style={styles.topbar}>
       <div>
-        <div style={{ fontSize: 16, fontWeight: 700 }}>Nora’s Dashboard</div>
-        <div style={{ fontSize: 12, color: "var(--muted)" }}>Location, safety, and vitals</div>
+        <div style={{ fontSize: 16, fontWeight: 700 }}>{title}</div>
+        <div style={{ fontSize: 12, color: "var(--muted)" }}>{subtitle}</div>
       </div>
       <div style={styles.user}>
         <div style={{ fontSize: 12, color: "var(--muted)" }}>Caregiver view</div>

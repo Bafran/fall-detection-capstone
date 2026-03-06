@@ -1,5 +1,7 @@
 import { useMemo, useState } from "react"
+import { useParams, Navigate } from "react-router-dom"
 import { haversineMeters } from "../utils/geo.js"
+import { getPatientById } from "../data/patients.js"
 import useBrowserLocation from "../hooks/useBrowserLocation.js"
 import Sidebar from "../components/layout/Sidebar.jsx"
 import Topbar from "../components/layout/Topbar.jsx"
@@ -9,6 +11,10 @@ import EventLog from "../components/panels/EventLog.jsx"
 import PatientPanel from "../components/panels/PatientPanel.jsx"
 
 export default function Dashboard() {
+  const { patientId } = useParams()
+  const patient = getPatientById(patientId ?? "")
+  if (!patient) return <Navigate to="/patients" replace />
+
   const loc = useBrowserLocation()
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
 
@@ -45,7 +51,7 @@ export default function Dashboard() {
     >
       <Sidebar collapsed={sidebarCollapsed} onToggle={() => setSidebarCollapsed(v => !v)} />
       <main style={styles.main}>
-        <Topbar />
+        <Topbar patient={patient} />
 
         <section style={styles.cards}>
           <StatusCard
@@ -62,14 +68,6 @@ export default function Dashboard() {
             tone={safeZoneTone}
             sub={`${safeZone.name} zone`}
             icon="pin"
-          />
-
-          <StatusCard
-            title="Heart Rate"
-            value="67 bpm"
-            tone="neutral"
-            sub="Updated: 5 min ago"
-            icon="heart"
           />
 
           <StatusCard
@@ -98,6 +96,7 @@ export default function Dashboard() {
             setSafeZone={setSafeZone}
           />
           <PatientPanel
+            patient={patient}
             safeZoneValue={safeZoneValue}
           />
           <EventLog />
@@ -121,7 +120,7 @@ const styles = {
   },
   cards: {
     display: "grid",
-    gridTemplateColumns: "repeat(5, minmax(0, 1fr))",
+    gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
     gap: 12,
   },
   grid: {

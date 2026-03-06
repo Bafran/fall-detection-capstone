@@ -18,3 +18,38 @@ export function haversineMeters(a, b) {
 
   return 2 * R * Math.asin(Math.sqrt(h))
 }
+
+/**
+ * Geocode an address to lat/lng using OpenStreetMap Nominatim.
+ * Use sparingly; Nominatim requires a descriptive User-Agent.
+ * @param {string} query - Address or place name
+ * @returns {Promise<{ lat: number, lng: number, displayName: string } | null>}
+ */
+export async function geocodeAddress(query) {
+  const trimmed = query?.trim()
+  if (!trimmed) return null
+  const params = new URLSearchParams({
+    q: trimmed,
+    format: "json",
+    limit: "1",
+  })
+  const res = await fetch(
+    `https://nominatim.openstreetmap.org/search?${params}`,
+    {
+      headers: {
+        Accept: "application/json",
+        "Accept-Language": "en",
+        "User-Agent": "FallDetectionDashboard/1.0 (caregiver home zone setup)",
+      },
+    }
+  )
+  if (!res.ok) return null
+  const data = await res.json()
+  const first = data?.[0]
+  if (!first?.lat || !first?.lon) return null
+  return {
+    lat: Number(first.lat),
+    lng: Number(first.lon),
+    displayName: first.display_name ?? trimmed,
+  }
+}

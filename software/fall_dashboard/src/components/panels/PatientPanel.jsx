@@ -1,4 +1,7 @@
-export default function PatientPanel() {
+export default function PatientPanel({ patient, safeZoneValue }) {
+  const name = patient?.name ?? "Patient"
+  const initial = name.charAt(0).toUpperCase()
+
   return (
     <section style={styles.panel}>
       <div style={styles.head}>
@@ -7,9 +10,9 @@ export default function PatientPanel() {
 
       <div style={styles.body}>
         <div style={styles.row}>
-          <div style={styles.avatar}>N</div>
+          <div style={styles.avatar}>{initial}</div>
           <div>
-            <div style={{ fontWeight: 800 }}>Nora</div>
+            <div style={{ fontWeight: 800 }}>{name}</div>
             <div style={{ fontSize: 12, color: "var(--muted)" }}>Watch status: Connected</div>
           </div>
         </div>
@@ -21,13 +24,13 @@ export default function PatientPanel() {
           </div>
           <div>
             <div style={styles.k}>Safe zone</div>
-            <div style={styles.v}>Home</div>
+            <div style={styles.v}>{safeZoneValue ?? "—"}</div>
           </div>
         </div>
 
         <div style={styles.actions}>
           <button style={styles.primary}>Emergency Call</button>
-          <button style={styles.secondary}>Notify Caregiver</button>
+          <button style={styles.secondary}>Call Patient</button>
         </div>
       </div>
     </section>

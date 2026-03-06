@@ -1,8 +1,13 @@
+import { Link, useLocation } from "react-router-dom"
 import logo from "../../assets/elbert_logo.png"
 import "../../styles/globals.css"
-import { Menu, LayoutGrid, Users, Shield, List, Settings } from "lucide-react"
+import { Menu, Users, List, Settings } from "lucide-react"
 
 export default function Sidebar({ collapsed, onToggle }) {
+  const location = useLocation()
+  const pathname = location.pathname
+  const onPatientsSection = pathname.startsWith("/patients")
+
   return (
     <aside style={{ ...styles.sidebar, width: collapsed ? 84 : 260 }}>
       <div
@@ -27,11 +32,15 @@ export default function Sidebar({ collapsed, onToggle }) {
       </div>
 
       <nav style={styles.nav}>
-        <SideItem collapsed={collapsed} active label="Dashboard" icon={<LayoutGrid size={18} />} />
-        <SideItem collapsed={collapsed} label="Caregivers" icon={<Users size={18} />} />
-        <SideItem collapsed={collapsed} label="Safe Zones" icon={<Shield size={18} />} />
-        <SideItem collapsed={collapsed} label="Event Logs" icon={<List size={18} />} />
-        <SideItem collapsed={collapsed} label="Settings" icon={<Settings size={18} />} />
+        <SideItem
+          collapsed={collapsed}
+          active={onPatientsSection}
+          label="Patients"
+          icon={<Users size={18} />}
+          to="/patients"
+        />
+        <SideItem collapsed={collapsed} label="Event Logs" icon={<List size={18} />} to="#" />
+        <SideItem collapsed={collapsed} label="Settings" icon={<Settings size={18} />} to="#" />
       </nav>
 
       <div style={{ flex: 1 }} />
@@ -43,20 +52,29 @@ export default function Sidebar({ collapsed, onToggle }) {
   )
 }
 
-function SideItem({ collapsed, label, icon, active }) {
-  return (
-    <a
-      href="#"
-      style={{
-        ...styles.link,
-        ...(active ? styles.active : null),
-        justifyContent: collapsed ? "center" : "flex-start",
-      }}
-      title={collapsed ? label : undefined}
-    >
+function SideItem({ collapsed, label, icon, active, to }) {
+  const style = {
+    ...styles.link,
+    ...(active ? styles.active : null),
+    justifyContent: collapsed ? "center" : "flex-start",
+  }
+  const content = (
+    <>
       <span style={styles.iconSlot}>{icon}</span>
       {!collapsed ? <span>{label}</span> : null}
-    </a>
+    </>
+  )
+  if (to === "#") {
+    return (
+      <a href="#" style={style} title={collapsed ? label : undefined}>
+        {content}
+      </a>
+    )
+  }
+  return (
+    <Link to={to} style={style} title={collapsed ? label : undefined}>
+      {content}
+    </Link>
   )
 }
 
