@@ -66,7 +66,11 @@ export default function Dashboard() {
   let fallCardTone = "neutral"
   let fallCardSub = "Waiting for device data…"
 
-  if (latestEventType === "manual_trigger") {
+  if (latestEventType === "alert_cleared") {
+    fallCardValue = "Safe"
+    fallCardTone = "ok"
+    fallCardSub = `Cleared at ${formatTimeFromSeconds(latestEvent?.received_time)}`
+  } else if (latestEventType === "manual_trigger") {
     fallCardValue = "Manual trigger"
     fallCardTone = "danger"
     fallCardSub = `Triggered at ${formatTimeFromSeconds(latestEvent?.received_time)}`

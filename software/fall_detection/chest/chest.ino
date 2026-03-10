@@ -35,6 +35,14 @@ bool btn_pressed = false;
 int64_t btn_press_start_us = 0;
 const int64_t MANUAL_TRIGGER_US = 5000000; // 5 seconds
 
+// Double-press cancel
+uint8_t short_press_count = 0;
+int64_t last_short_press_release_us = 0;
+const int64_t DOUBLE_PRESS_WINDOW_US = 1000000; // 1 second between presses
+
+// Track whether an alert has been raised
+bool alert_active = false;
+
 // Sampling Rate
 const uint32_t SAMPLE_PERIOD_MS = 10; // ~100 Hz
 
@@ -123,6 +131,50 @@ const char* fallStateToString() {
     default:
       return "UNKNOWN";
   }
+}
+
+static void sendUdpEvent(
+  const char* event_type,
+  int64_t t_us,
+  float chest_a_mag,
+  float chest_w_mag,
+  uint32_t chest_batt_mv,
+  uint32_t chest_curr_mA,
+  uint32_t wrist_batt_mv,
+  uint32_t wrist_curr_mA
+) {
+  if (WiFi.status() != WL_CONNECTED) return;
+
+  char eventbuf[220];
+  int en = snprintf(
+    eventbuf, sizeof(eventbuf),
+    "event,%s,%s,%lld,%.2f,%.2f,%lu,%lu,%lu,%lu",
+    event_type,
+    DEVICE_ID,
+    (long long)t_us,
+    chest_a_mag,
+    chest_w_mag,
+    (unsigned long)chest_batt_mv,
+    (unsigned long)chest_curr_mA,
+    (unsigned long)wrist_batt_mv,
+    (unsigned long)wrist_curr_mA
+  );
+
+  if (en > 0) {
+    udp.beginPacket(SERVER_IP, SERVER_PORT);
+    udp.write((uint8_t*)eventbuf, en);
+    udp.endPacket();
+  }
+}
+
+static void clearAlertState() {
+  fall_state = FD_IDLE;
+  verifying = false;
+  impact_hits = 0;
+  chest_still_start_us = 0;
+  impact_time_us = 0;
+  verify_still_score = 0;
+  alert_active = false;
 }
 
 void setup() {
@@ -228,39 +280,72 @@ void loop() {
 
   // Button released
   if (btn_state == HIGH && btn_pressed) {
+    int64_t press_duration_us = t_us - btn_press_start_us;
     btn_pressed = false;
+
+    // Ignore long holds here because those are handled by manual trigger
+    if (press_duration_us < MANUAL_TRIGGER_US) {
+      bool cancellable_state =
+        alert_active || verifying || (fall_state != FD_IDLE);
+
+      if (cancellable_state) {
+        if (short_press_count == 0) {
+          short_press_count = 1;
+          last_short_press_release_us = t_us;
+        } else if ((t_us - last_short_press_release_us) <= DOUBLE_PRESS_WINDOW_US) {
+          Serial.println(">>> ALERT CLEARED BY DOUBLE PRESS");
+          blink_confirm();
+
+          clearAlertState();
+
+          sendUdpEvent(
+            "alert_cleared",
+            t_us,
+            chest_a_mag,
+            chest_w_mag,
+            v_batt_mv,
+            curr_sense_mA,
+            w.batt_mv,
+            w.curr_mA
+          );
+
+          short_press_count = 0;
+        } else {
+          short_press_count = 1;
+          last_short_press_release_us = t_us;
+        }
+      } else {
+        short_press_count = 0;
+      }
+    }
+  }
+
+  // Expire first short press if second one never comes
+  if (short_press_count == 1 && (t_us - last_short_press_release_us) > DOUBLE_PRESS_WINDOW_US) {
+    short_press_count = 0;
   }
 
   // If button held long enough -> trigger manual fall
   if (btn_pressed && (t_us - btn_press_start_us >= MANUAL_TRIGGER_US)) {
-
     Serial.println(">>> MANUAL FALL TRIGGER (5s hold)");
     blink_confirm();
 
-    if (WiFi.status() == WL_CONNECTED) {
-      char eventbuf[180];
-      int en = snprintf(
-        eventbuf, sizeof(eventbuf),
-        "event,manual_trigger,%s,%lld,%.2f,%.2f,%lu,%lu,%lu,%lu",
-        DEVICE_ID,
-        (long long)t_us,
-        chest_a_mag,
-        chest_w_mag,
-        (unsigned long)v_batt_mv,
-        (unsigned long)curr_sense_mA,
-        (unsigned long)w.batt_mv,
-        (unsigned long)w.curr_mA
-      );
+    sendUdpEvent(
+      "manual_trigger",
+      t_us,
+      chest_a_mag,
+      chest_w_mag,
+      v_batt_mv,
+      curr_sense_mA,
+      w.batt_mv,
+      w.curr_mA
+    );
 
-      if (en > 0) {
-        udp.beginPacket(SERVER_IP, SERVER_PORT);
-        udp.write((uint8_t*)eventbuf, en);
-        udp.endPacket();
-      }
-    }
+    alert_active = true;
 
     // prevent retrigger while still holding
     btn_pressed = false;
+    short_press_count = 0;
   }
 
   // Chest candidate detection
@@ -354,21 +439,18 @@ void loop() {
       Serial.println(verify_still_score);
       blink_confirm();
 
-      // Send UDP event to server_ui.py if WiFi is up
-      if (WiFi.status() == WL_CONNECTED) {
-        char eventbuf[180];
-        int en = snprintf(
-          eventbuf, sizeof(eventbuf),
-          "event,fall_confirmed,%s,%lld,%.2f,%.2f",
-          DEVICE_ID, (long long)t_us,
-          chest_a_mag, chest_w_mag
-        );
-        if (en > 0) {
-          udp.beginPacket(SERVER_IP, SERVER_PORT);
-          udp.write((uint8_t*)eventbuf, en);
-          udp.endPacket();
-        }
-      }
+      sendUdpEvent(
+        "fall_confirmed",
+        t_us,
+        chest_a_mag,
+        chest_w_mag,
+        v_batt_mv,
+        curr_sense_mA,
+        w.batt_mv,
+        w.curr_mA
+      );
+
+      alert_active = true;
 
       verifying = false;
       verify_still_score = 0;
