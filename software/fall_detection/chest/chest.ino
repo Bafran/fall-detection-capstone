@@ -241,7 +241,7 @@ void loop() {
       char eventbuf[180];
       int en = snprintf(
         eventbuf, sizeof(eventbuf),
-        "event,fall_confirmed,%s,%lld,%.2f,%.2f,%lu,%lu,%lu,%lu",
+        "event,manual_trigger,%s,%lld,%.2f,%.2f,%lu,%lu,%lu,%lu",
         DEVICE_ID,
         (long long)t_us,
         chest_a_mag,
@@ -446,8 +446,8 @@ void loop() {
     Serial.println("mA");
   }
 
-  // Periodic UDP status send (1 Hz)
-  if (WiFi.status() == WL_CONNECTED && now_ms - last_status_udp_ms >= 1000) {
+  // Periodic UDP status send (1 per 30 seconds
+  if (WiFi.status() == WL_CONNECTED && now_ms - last_status_udp_ms >= 30000) {
     last_status_udp_ms = now_ms;
 
     bool wrist_fresh = (wrist_rx_age_us >= 0) && (wrist_rx_age_us < WRIST_RX_TIMEOUT_US);
