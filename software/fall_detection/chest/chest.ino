@@ -4,6 +4,8 @@
 #include <math.h>
 #include <esp_now.h>
 #include <WiFi.h>
+#include <WiFiUdp.h>
+#include "../fall_detection/secrets.h"
 
 // Chest Master script and Wrist data receiver 
 
@@ -22,9 +24,20 @@ volatile int64_t last_wrist_rx_us = 0;
 #define USER_LED 10
 #define SDA_PIN 3
 #define SCL_PIN 8
+#define USER_BTN 9
+
+// Manual fall trigger
+bool btn_pressed = false;
+int64_t btn_press_start_us = 0;
+const int64_t MANUAL_TRIGGER_US = 5000000; // 5 seconds
 
 // Sampling Rate
 const uint32_t SAMPLE_PERIOD_MS = 10; // ~100 Hz
+
+// UDP fall event reporting (to Python server_ui.py)
+const uint16_t SERVER_PORT = 9000;
+WiFiUDP udp;
+const char* DEVICE_ID = "chest";
 
 // Helper Functions 
 static inline float mag3f(float x, float y, float z) {
@@ -97,13 +110,28 @@ void OnDataRecv(const esp_now_recv_info_t *info, const uint8_t *incomingData, in
 
 void setup() {
   pinMode(USER_LED, OUTPUT);
+  pinMode(USER_BTN, INPUT_PULLUP);
   digitalWrite(USER_LED, LOW);
 
   Serial.begin(115200);
   delay(500);
 
-  // ESP now init
+  // WiFi + ESP-NOW init
   WiFi.mode(WIFI_STA);
+  Serial.println("Connecting to WiFi...");
+  WiFi.begin(WIFI_SSID, WIFI_PASS);
+  uint8_t wifi_attempts = 0;
+  while (WiFi.status() != WL_CONNECTED && wifi_attempts < 40) {
+    delay(250);
+    wifi_attempts++;
+  }
+  if (WiFi.status() == WL_CONNECTED) {
+    Serial.print("WiFi connected, IP=");
+    Serial.println(WiFi.localIP());
+  } else {
+    Serial.println("WiFi connect failed, continuing with ESP-NOW only");
+  }
+
   if (esp_now_init() != ESP_OK) {
     Serial.println("ESP-NOW init failed");
     while (1) { delay(500); }
@@ -161,6 +189,46 @@ void loop() {
     chest_still_start_us = 0;
     verify_still_score = 0;
     return;
+  }
+
+
+  bool btn_state = digitalRead(USER_BTN);
+
+  // Button pressed
+  if (btn_state == LOW && !btn_pressed) {
+    btn_pressed = true;
+    btn_press_start_us = t_us;
+  }
+
+  // Button released
+  if (btn_state == HIGH && btn_pressed) {
+    btn_pressed = false;
+  }
+
+  // If button held long enough -> trigger manual fall
+  if (btn_pressed && (t_us - btn_press_start_us >= MANUAL_TRIGGER_US)) {
+
+    Serial.println(">>> MANUAL FALL TRIGGER (5s hold)");
+    blink_confirm();
+
+    if (WiFi.status() == WL_CONNECTED) {
+      char eventbuf[180];
+      int en = snprintf(
+        eventbuf, sizeof(eventbuf),
+        "event,fall_confirmed,%s,%lld,%.2f,%.2f",
+        DEVICE_ID, (long long)t_us,
+        chest_a_mag, chest_w_mag
+      );
+
+      if (en > 0) {
+        udp.beginPacket(SERVER_IP, SERVER_PORT);
+        udp.write((uint8_t*)eventbuf, en);
+        udp.endPacket();
+      }
+    }
+
+    // prevent retrigger while still holding
+    btn_pressed = false;
   }
 
   // Chest candidate detection
@@ -253,6 +321,22 @@ void loop() {
       Serial.print("  score=");
       Serial.println(verify_still_score);
       blink_confirm();
+
+      // Send UDP event to server_ui.py if WiFi is up
+      if (WiFi.status() == WL_CONNECTED) {
+        char eventbuf[180];
+        int en = snprintf(
+          eventbuf, sizeof(eventbuf),
+          "event,fall_confirmed,%s,%lld,%.2f,%.2f",
+          DEVICE_ID, (long long)t_us,
+          chest_a_mag, chest_w_mag
+        );
+        if (en > 0) {
+          udp.beginPacket(SERVER_IP, SERVER_PORT);
+          udp.write((uint8_t*)eventbuf, en);
+          udp.endPacket();
+        }
+      }
 
       verifying = false;
       verify_still_score = 0;
