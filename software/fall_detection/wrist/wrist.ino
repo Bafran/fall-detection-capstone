@@ -3,9 +3,12 @@
 #include <Wire.h>
 #include <Adafruit_LSM6DSOX.h>
 
+// Pins
 #define USER_LED 10
 #define SDA_PIN 3
 #define SCL_PIN 8
+#define V_BATT_SENSE_PIN 0
+#define CURR_SENSE_PIN 1
 
 Adafruit_LSM6DSOX lsm6ds;
 
@@ -19,19 +22,24 @@ typedef struct struct_message {
   float gx;
   float gy;
   float gz;
+  uint32_t batt_mv;
+  uint32_t curr_mA;
 } struct_message;
 
 struct_message myData;
 esp_now_peer_info_t peerInfo;
 
-void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status) {
+void OnDataSent(const wifi_tx_info_t *info, esp_now_send_status_t status) {
   Serial.print("Send Status: ");
   Serial.println(status == ESP_NOW_SEND_SUCCESS ? "Success" : "Fail");
 }
 
 void setup() {
   Serial.begin(115200);
-  delay(1000);
+  delay(500);
+
+  analogSetPinAttenuation(V_BATT_SENSE_PIN, ADC_6db);
+  analogSetPinAttenuation(CURR_SENSE_PIN, ADC_11db);
 
   // WiFi for ESP-NOW
   WiFi.mode(WIFI_STA);
@@ -79,6 +87,15 @@ void loop() {
   myData.gx = gyro.gyro.x;
   myData.gy = gyro.gyro.y;
   myData.gz = gyro.gyro.z;
+
+  uint32_t v_batt_sense_raw_mv = analogReadMilliVolts(V_BATT_SENSE_PIN);
+  uint32_t v_batt_mv = v_batt_sense_raw_mv * 3;   // 200k / 100k divider
+
+  uint32_t curr_sense_raw_mv = analogReadMilliVolts(CURR_SENSE_PIN);
+  uint32_t curr_sense_mA = curr_sense_raw_mv / 5; // 5 mV per mA
+
+  myData.batt_mv = v_batt_mv;
+  myData.curr_mA = curr_sense_mA;
 
   esp_now_send(broadcastAddress, (uint8_t *)&myData, sizeof(myData));
 

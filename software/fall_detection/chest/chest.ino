@@ -15,6 +15,8 @@ Adafruit_LSM6DSOX lsm6ds;
 typedef struct __attribute__((packed)) {
   float ax, ay, az;
   float gx, gy, gz;
+  uint32_t batt_mv;
+  uint32_t curr_mA;
 } WristMsg;
 
 volatile WristMsg wristData;
@@ -25,6 +27,8 @@ volatile int64_t last_wrist_rx_us = 0;
 #define SDA_PIN 3
 #define SCL_PIN 8
 #define USER_BTN 9
+#define V_BATT_SENSE_PIN 0
+#define CURR_SENSE_PIN 1
 
 // Manual fall trigger
 bool btn_pressed = false;
@@ -108,6 +112,19 @@ void OnDataRecv(const esp_now_recv_info_t *info, const uint8_t *incomingData, in
   }
 }
 
+const char* fallStateToString() {
+  if (verifying) return "VERIFYING";
+
+  switch (fall_state) {
+    case FD_IDLE:
+      return "IDLE";
+    case FD_IMPACT_DETECTED:
+      return "IMPACT_DETECTED";
+    default:
+      return "UNKNOWN";
+  }
+}
+
 void setup() {
   pinMode(USER_LED, OUTPUT);
   pinMode(USER_BTN, INPUT_PULLUP);
@@ -115,6 +132,9 @@ void setup() {
 
   Serial.begin(115200);
   delay(500);
+
+  analogSetPinAttenuation(V_BATT_SENSE_PIN, ADC_6db);
+  analogSetPinAttenuation(CURR_SENSE_PIN, ADC_11db);
 
   // WiFi + ESP-NOW init
   WiFi.mode(WIFI_STA);
@@ -159,6 +179,7 @@ void loop() {
   static uint32_t last_sample_ms = 0;
   static uint32_t last_debug_ms = 0;
   static uint32_t last_verify_dbg_ms = 0;
+  static uint32_t last_status_udp_ms = 0;
 
   uint32_t now_ms = millis();
   if (now_ms - last_sample_ms < SAMPLE_PERIOD_MS) return;
@@ -172,6 +193,12 @@ void loop() {
 
   float chest_a_mag = mag3f(accel.acceleration.x, accel.acceleration.y, accel.acceleration.z);
   float chest_w_mag = mag3f(gyro.gyro.x, gyro.gyro.y, gyro.gyro.z);
+
+  uint32_t v_batt_sense_raw_mv = analogReadMilliVolts(V_BATT_SENSE_PIN);
+  uint32_t v_batt_mv = v_batt_sense_raw_mv * 3;   // 200k / 100k divider
+
+  uint32_t curr_sense_raw_mv = analogReadMilliVolts(CURR_SENSE_PIN);
+  uint32_t curr_sense_mA = curr_sense_raw_mv / 5; // 5 mV per mA
 
   // Copy the wrist data
   WristMsg w;
@@ -190,7 +217,6 @@ void loop() {
     verify_still_score = 0;
     return;
   }
-
 
   bool btn_state = digitalRead(USER_BTN);
 
@@ -215,9 +241,15 @@ void loop() {
       char eventbuf[180];
       int en = snprintf(
         eventbuf, sizeof(eventbuf),
-        "event,fall_confirmed,%s,%lld,%.2f,%.2f",
-        DEVICE_ID, (long long)t_us,
-        chest_a_mag, chest_w_mag
+        "event,fall_confirmed,%s,%lld,%.2f,%.2f,%lu,%lu,%lu,%lu",
+        DEVICE_ID,
+        (long long)t_us,
+        chest_a_mag,
+        chest_w_mag,
+        (unsigned long)v_batt_mv,
+        (unsigned long)curr_sense_mA,
+        (unsigned long)w.batt_mv,
+        (unsigned long)w.curr_mA
       );
 
       if (en > 0) {
@@ -395,6 +427,53 @@ void loop() {
     Serial.print(wrist_w_mag, 2);
 
     Serial.print("  verifying=");
-    Serial.println(verifying ? "yes" : "no");
+    Serial.print(verifying ? "yes" : "no");
+
+    Serial.print("  Chest Batt=");
+    Serial.print(v_batt_mv);
+    Serial.print("mV");
+
+    Serial.print("  Chest Curr=");
+    Serial.print(curr_sense_mA);
+    Serial.print("mA");
+
+    Serial.print("  Wrist Batt=");
+    Serial.print(w.batt_mv);
+    Serial.print("mV");
+
+    Serial.print("  Wrist Curr=");
+    Serial.print(w.curr_mA);
+    Serial.println("mA");
+  }
+
+  // Periodic UDP status send (1 Hz)
+  if (WiFi.status() == WL_CONNECTED && now_ms - last_status_udp_ms >= 1000) {
+    last_status_udp_ms = now_ms;
+
+    bool wrist_fresh = (wrist_rx_age_us >= 0) && (wrist_rx_age_us < WRIST_RX_TIMEOUT_US);
+
+    char statusbuf[256];
+    int sn = snprintf(
+      statusbuf, sizeof(statusbuf),
+      "status,%s,%lld,%s,%lu,%lu,%lu,%lu,%d,%.2f,%.2f,%.2f,%.2f",
+      DEVICE_ID,
+      (long long)t_us,
+      fallStateToString(),
+      (unsigned long)v_batt_mv,      // chest battery
+      (unsigned long)curr_sense_mA,  // chest current
+      (unsigned long)w.batt_mv,      // wrist battery
+      (unsigned long)w.curr_mA,      // wrist current
+      wrist_fresh ? 1 : 0,           // wrist packet fresh?
+      chest_a_mag,
+      chest_w_mag,
+      wrist_a_mag,
+      wrist_w_mag
+    );
+
+    if (sn > 0) {
+      udp.beginPacket(SERVER_IP, SERVER_PORT);
+      udp.write((uint8_t*)statusbuf, sn);
+      udp.endPacket();
+    }
   }
 }
