@@ -224,6 +224,7 @@ void setup() {
 
 void loop() {
 
+  static bool led_state = true;
   // Toggle LED
   if (led_state) {
     digitalWrite(USER_LED, HIGH);
