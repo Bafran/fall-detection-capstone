@@ -55,11 +55,6 @@ const char* DEVICE_ID = "chest";
 static inline float mag3f(float x, float y, float z) {
   return sqrtf(x*x + y*y + z*z);
 }
-static void blink_confirm() {
-  digitalWrite(USER_LED, HIGH);
-  delay(250);
-  digitalWrite(USER_LED, LOW);
-}
 
 // Fall Detection State Machine
 enum FallState { FD_IDLE, FD_IMPACT_DETECTED };
@@ -180,7 +175,7 @@ static void clearAlertState() {
 void setup() {
   pinMode(USER_LED, OUTPUT);
   pinMode(USER_BTN, INPUT_PULLUP);
-  digitalWrite(USER_LED, LOW);
+  digitalWrite(USER_LED, HIGH);
 
   Serial.begin(115200);
   delay(500);
@@ -228,6 +223,15 @@ void setup() {
 }
 
 void loop() {
+
+  // Toggle LED
+  if (led_state) {
+    digitalWrite(USER_LED, HIGH);
+  } else {
+    digitalWrite(USER_LED, LOW);
+  }
+  led_state = !led_state;
+
   static uint32_t last_sample_ms = 0;
   static uint32_t last_debug_ms = 0;
   static uint32_t last_verify_dbg_ms = 0;
@@ -294,7 +298,6 @@ void loop() {
           last_short_press_release_us = t_us;
         } else if ((t_us - last_short_press_release_us) <= DOUBLE_PRESS_WINDOW_US) {
           Serial.println(">>> ALERT CLEARED BY DOUBLE PRESS");
-          blink_confirm();
 
           clearAlertState();
 
@@ -328,7 +331,6 @@ void loop() {
   // If button held long enough -> trigger manual fall
   if (btn_pressed && (t_us - btn_press_start_us >= MANUAL_TRIGGER_US)) {
     Serial.println(">>> MANUAL FALL TRIGGER (5s hold)");
-    blink_confirm();
 
     sendUdpEvent(
       "manual_trigger",
@@ -437,7 +439,6 @@ void loop() {
       Serial.print((t_us - verify_start_us) / 1000000.0, 3);
       Serial.print("  score=");
       Serial.println(verify_still_score);
-      blink_confirm();
 
       sendUdpEvent(
         "fall_confirmed",

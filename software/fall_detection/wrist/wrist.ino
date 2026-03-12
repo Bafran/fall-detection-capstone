@@ -38,6 +38,10 @@ void setup() {
   Serial.begin(115200);
   delay(500);
 
+  pinMode(USER_LED, OUTPUT);
+  // Set LED high
+  digitalWrite(USER_LED, HIGH);
+
   analogSetPinAttenuation(V_BATT_SENSE_PIN, ADC_6db);
   analogSetPinAttenuation(CURR_SENSE_PIN, ADC_11db);
 
@@ -76,6 +80,14 @@ void setup() {
 }
 
 void loop() {
+
+  // Toggle LED
+  if (led_state) {
+    digitalWrite(USER_LED, HIGH);
+  } else {
+    digitalWrite(USER_LED, LOW);
+  }
+  led_state = !led_state;
 
   sensors_event_t accel, gyro, temp;
   lsm6ds.getEvent(&accel, &gyro, &temp);
