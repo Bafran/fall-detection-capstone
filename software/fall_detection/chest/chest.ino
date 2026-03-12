@@ -224,21 +224,23 @@ void setup() {
 
 void loop() {
 
-  static bool led_state = true;
+  static uint32_t last_led_toggle_ms = 0;
+  static bool led_state = false;
+  
+  uint32_t now_ms = millis();
+
   // Toggle LED
-  if (led_state) {
-    digitalWrite(USER_LED, HIGH);
-  } else {
-    digitalWrite(USER_LED, LOW);
+  if (now_ms - last_led_toggle_ms >= 500) {
+    last_led_toggle_ms = now_ms;
+    led_state = !led_state;
+    digitalWrite(USER_LED, led_state ? HIGH : LOW);
   }
-  led_state = !led_state;
 
   static uint32_t last_sample_ms = 0;
   static uint32_t last_debug_ms = 0;
   static uint32_t last_verify_dbg_ms = 0;
   static uint32_t last_status_udp_ms = 0;
 
-  uint32_t now_ms = millis();
   if (now_ms - last_sample_ms < SAMPLE_PERIOD_MS) return;
   last_sample_ms += SAMPLE_PERIOD_MS;
 
